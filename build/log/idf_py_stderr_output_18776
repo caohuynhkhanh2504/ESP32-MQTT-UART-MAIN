@@ -1,0 +1,77 @@
+[0;33m--- WARNING: GDB cannot open serial ports accessed as COMx[0m
+[0;33m--- Using \\.\COM9 instead...[0m
+[0;33m--- esp-idf-monitor 1.4.0 on \\.\COM9 115200 ---[0m
+[0;33m--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H ---[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x40081b5e: panic_abort at D:/Espressif/frameworks/esp-idf-v5.3.1/components/esp_system/panic.c:463
+0x4008a74d: esp_system_abort at D:/Espressif/frameworks/esp-idf-v5.3.1/components/esp_system/port/esp_system_chip.c:92
+0x4008b686: vApplicationStackOverflowHook at D:/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:554
+0x4008c9bf: vTaskSwitchContext at D:/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/tasks.c:3701 (discriminator 7)
+0x4008b790: _frxt_dispatch at D:/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/portasm.S:451
+0x4008b742: _frxt_int_exit at D:/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/portasm.S:246
+0x400dd999: esp_task_wdt_reset at D:/Espressif/frameworks/esp-idf-v5.3.1/components/esp_system/task_wdt/task_wdt.c:696 (discriminator 1)
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x40081b5e: panic_abort at D:/Espressif/frameworks/esp-idf-v5.3.1/components/esp_system/panic.c:463
+0x4008a74d: esp_system_abort at D:/Espressif/frameworks/esp-idf-v5.3.1/components/esp_system/port/esp_system_chip.c:92
+0x4008b686: vApplicationStackOverflowHook at D:/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:554
+0x4008c9bf: vTaskSwitchContext at D:/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/tasks.c:3701 (discriminator 7)
+0x4008b790: _frxt_dispatch at D:/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/portasm.S:451
+0x4008b742: _frxt_int_exit at D:/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/portasm.S:246
+0x400dd999: esp_task_wdt_reset at D:/Espressif/frameworks/esp-idf-v5.3.1/components/esp_system/task_wdt/task_wdt.c:696 (discriminator 1)
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x40081b5e: panic_abort at D:/Espressif/frameworks/esp-idf-v5.3.1/components/esp_system/panic.c:463
+0x4008a74d: esp_system_abort at D:/Espressif/frameworks/esp-idf-v5.3.1/components/esp_system/port/esp_system_chip.c:92
+0x4008b686: vApplicationStackOverflowHook at D:/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:554
+0x4008c9bf: vTaskSwitchContext at D:/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/tasks.c:3701 (discriminator 7)
+0x4008b790: _frxt_dispatch at D:/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/portasm.S:451
+0x4008b742: _frxt_int_exit at D:/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/portasm.S:246
+0x400dd999: esp_task_wdt_reset at D:/Espressif/frameworks/esp-idf-v5.3.1/components/esp_system/task_wdt/task_wdt.c:696 (discriminator 1)
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x40081b5e: panic_abort at D:/Espressif/frameworks/esp-idf-v5.3.1/components/esp_system/panic.c:463
+0x4008a74d: esp_system_abort at D:/Espressif/frameworks/esp-idf-v5.3.1/components/esp_system/port/esp_system_chip.c:92
+0x40092685: __assert_func at D:/Espressif/frameworks/esp-idf-v5.3.1/components/newlib/assert.c:80
+0x4008c153: prvSelectHighestPriorityTaskSMP at D:/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/tasks.c:3645 (discriminator 1)
+0x4008c9c2: vTaskSwitchContext at D:/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/tasks.c:3712
+0x4008b790: _frxt_dispatch at D:/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/portasm.S:451
+0x4008b742: _frxt_int_exit at D:/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/portasm.S:246
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x40081b5e: panic_abort at D:/Espressif/frameworks/esp-idf-v5.3.1/components/esp_system/panic.c:463
+0x4008a74d: esp_system_abort at D:/Espressif/frameworks/esp-idf-v5.3.1/components/esp_system/port/esp_system_chip.c:92
+0x40092685: __assert_func at D:/Espressif/frameworks/esp-idf-v5.3.1/components/newlib/assert.c:80
+0x4008c153: prvSelectHighestPriorityTaskSMP at D:/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/tasks.c:3645 (discriminator 1)
+0x4008c9c2: vTaskSwitchContext at D:/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/tasks.c:3712
+0x4008b790: _frxt_dispatch at D:/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/portasm.S:451
+0x4008b742: _frxt_int_exit at D:/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/portasm.S:246
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x40081b5e: panic_abort at D:/Espressif/frameworks/esp-idf-v5.3.1/components/esp_system/panic.c:463
+0x4008a74d: esp_system_abort at D:/Espressif/frameworks/esp-idf-v5.3.1/components/esp_system/port/esp_system_chip.c:92
+0x4008b686: vApplicationStackOverflowHook at D:/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:554
+0x4008c9bf: vTaskSwitchContext at D:/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/tasks.c:3701 (discriminator 7)
+0x4008b790: _frxt_dispatch at D:/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/portasm.S:451
+0x4008b742: _frxt_int_exit at D:/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/portasm.S:246
+0x400dd999: esp_task_wdt_reset at D:/Espressif/frameworks/esp-idf-v5.3.1/components/esp_system/task_wdt/task_wdt.c:696 (discriminator 1)
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x40081b5e: panic_abort at D:/Espressif/frameworks/esp-idf-v5.3.1/components/esp_system/panic.c:463
+0x4008a74d: esp_system_abort at D:/Espressif/frameworks/esp-idf-v5.3.1/components/esp_system/port/esp_system_chip.c:92
+0x4008b686: vApplicationStackOverflowHook at D:/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:554
+0x4008c9bf: vTaskSwitchContext at D:/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/tasks.c:3701 (discriminator 7)
+0x4008b790: _frxt_dispatch at D:/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/portasm.S:451
+0x4008b742: _frxt_int_exit at D:/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/portasm.S:246
+0x400dd999: esp_task_wdt_reset at D:/Espressif/frameworks/esp-idf-v5.3.1/components/esp_system/task_wdt/task_wdt.c:696 (discriminator 1)
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0m
