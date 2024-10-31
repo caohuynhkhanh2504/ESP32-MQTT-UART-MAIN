@@ -1,0 +1,201 @@
+[0;33m--- WARNING: GDB cannot open serial ports accessed as COMx[0m
+[0;33m--- Using \\.\COM9 instead...[0m
+[0;33m--- esp-idf-monitor 1.4.0 on \\.\COM9 115200 ---[0m
+[0;33m--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H ---[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x40081b4e: panic_abort at D:/Espressif/frameworks/esp-idf-v5.3.1/components/esp_system/panic.c:463
+0x4008a329: esp_system_abort at D:/Espressif/frameworks/esp-idf-v5.3.1/components/esp_system/port/esp_system_chip.c:92
+0x4009219d: __assert_func at D:/Espressif/frameworks/esp-idf-v5.3.1/components/newlib/assert.c:80
+0x4008fabc: block_locate_free at D:/Espressif/frameworks/esp-idf-v5.3.1/components/heap/tlsf/tlsf.c:566 (discriminator 1)
+ (inlined by) tlsf_malloc at D:/Espressif/frameworks/esp-idf-v5.3.1/components/heap/tlsf/tlsf.c:1015 (discriminator 1)
+0x4008f481: multi_heap_malloc_impl at D:/Espressif/frameworks/esp-idf-v5.3.1/components/heap/multi_heap.c:211
+0x400822f9: aligned_or_unaligned_alloc at D:/Espressif/frameworks/esp-idf-v5.3.1/components/heap/heap_caps_base.c:77
+0x40082405: heap_caps_aligned_alloc_base at D:/Espressif/frameworks/esp-idf-v5.3.1/components/heap/heap_caps_base.c:150
+0x40082435: heap_caps_malloc_base at D:/Espressif/frameworks/esp-idf-v5.3.1/components/heap/heap_caps_base.c:170
+0x400820f4: heap_caps_malloc at D:/Espressif/frameworks/esp-idf-v5.3.1/components/heap/heap_caps.c:84
+0x40082129: heap_caps_malloc_default at D:/Espressif/frameworks/esp-idf-v5.3.1/components/heap/heap_caps.c:110
+0x40092214: _calloc_r at D:/Espressif/frameworks/esp-idf-v5.3.1/components/newlib/heap.c:65
+0x40092238: calloc at D:/Espressif/frameworks/esp-idf-v5.3.1/components/newlib/heap.c:29 (discriminator 1)
+0x400dcbc1: outbox_enqueue at D:/Espressif/frameworks/esp-idf-v5.3.1/components/mqtt/esp-mqtt/lib/mqtt_outbox.c:44
+0x400db49b: mqtt_enqueue at D:/Espressif/frameworks/esp-idf-v5.3.1/components/mqtt/esp-mqtt/mqtt_client.c:1190 (discriminator 1)
+0x400db539: mqtt_client_enqueue_publish at D:/Espressif/frameworks/esp-idf-v5.3.1/components/mqtt/esp-mqtt/mqtt_client.c:2038
+0x400dc36c: esp_mqtt_client_publish at D:/Espressif/frameworks/esp-idf-v5.3.1/components/mqtt/esp-mqtt/mqtt_client.c:2092
+0x400d9b16: mqtt_publish_task at D:/NCKH2024/Summary/Huka/ESP32_MQTT_I2C/main/app_main.c:143 (discriminator 1)
+0x4008aef1: vPortTaskWrapper at D:/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x40081b4e: panic_abort at D:/Espressif/frameworks/esp-idf-v5.3.1/components/esp_system/panic.c:463
+0x4008a329: esp_system_abort at D:/Espressif/frameworks/esp-idf-v5.3.1/components/esp_system/port/esp_system_chip.c:92
+0x4009219d: __assert_func at D:/Espressif/frameworks/esp-idf-v5.3.1/components/newlib/assert.c:80
+0x4008fabc: block_locate_free at D:/Espressif/frameworks/esp-idf-v5.3.1/components/heap/tlsf/tlsf.c:566 (discriminator 1)
+ (inlined by) tlsf_malloc at D:/Espressif/frameworks/esp-idf-v5.3.1/components/heap/tlsf/tlsf.c:1015 (discriminator 1)
+0x4008f481: multi_heap_malloc_impl at D:/Espressif/frameworks/esp-idf-v5.3.1/components/heap/multi_heap.c:211
+0x400822f9: aligned_or_unaligned_alloc at D:/Espressif/frameworks/esp-idf-v5.3.1/components/heap/heap_caps_base.c:77
+0x40082405: heap_caps_aligned_alloc_base at D:/Espressif/frameworks/esp-idf-v5.3.1/components/heap/heap_caps_base.c:150
+0x40082435: heap_caps_malloc_base at D:/Espressif/frameworks/esp-idf-v5.3.1/components/heap/heap_caps_base.c:170
+0x400820f4: heap_caps_malloc at D:/Espressif/frameworks/esp-idf-v5.3.1/components/heap/heap_caps.c:84
+0x40082129: heap_caps_malloc_default at D:/Espressif/frameworks/esp-idf-v5.3.1/components/heap/heap_caps.c:110
+0x400921ad: malloc at D:/Espressif/frameworks/esp-idf-v5.3.1/components/newlib/heap.c:24
+0x4008512d: wifi_malloc at D:/Espressif/frameworks/esp-idf-v5.3.1/components/esp_wifi/esp32/esp_adapter.c:79
+0x4011d637: ieee80211_timer_process at ??:?
+0x40125f5f: pp_timer_process at ??:?
+0x401235c1: lmac_stop_hw_txq at ??:?
+0x4012be5a: timer_process_alarm at D:/Espressif/frameworks/esp-idf-v5.3.1/components/esp_timer/src/esp_timer.c:456
+0x4012bea9: timer_task at D:/Espressif/frameworks/esp-idf-v5.3.1/components/esp_timer/src/esp_timer.c:482 (discriminator 1)
+0x4008aef1: vPortTaskWrapper at D:/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x4008fae8: remove_free_block at D:/Espressif/frameworks/esp-idf-v5.3.1/components/heap/tlsf/tlsf.c:333
+ (inlined by) block_locate_free at D:/Espressif/frameworks/esp-idf-v5.3.1/components/heap/tlsf/tlsf.c:567
+ (inlined by) tlsf_malloc at D:/Espressif/frameworks/esp-idf-v5.3.1/components/heap/tlsf/tlsf.c:1015
+[0m
+[0;33m0x4000c2e0: memcpy in ROM
+0x4000c2f6: memcpy in ROM
+[0m
+[0;33m0x4008fae5: remove_free_block at D:/Espressif/frameworks/esp-idf-v5.3.1/components/heap/tlsf/tlsf.c:331 (discriminator 1)
+ (inlined by) block_locate_free at D:/Espressif/frameworks/esp-idf-v5.3.1/components/heap/tlsf/tlsf.c:567 (discriminator 1)
+ (inlined by) tlsf_malloc at D:/Espressif/frameworks/esp-idf-v5.3.1/components/heap/tlsf/tlsf.c:1015 (discriminator 1)
+0x4008f481: multi_heap_malloc_impl at D:/Espressif/frameworks/esp-idf-v5.3.1/components/heap/multi_heap.c:211
+0x400822f9: aligned_or_unaligned_alloc at D:/Espressif/frameworks/esp-idf-v5.3.1/components/heap/heap_caps_base.c:77
+0x40082405: heap_caps_aligned_alloc_base at D:/Espressif/frameworks/esp-idf-v5.3.1/components/heap/heap_caps_base.c:150
+0x40082435: heap_caps_malloc_base at D:/Espressif/frameworks/esp-idf-v5.3.1/components/heap/heap_caps_base.c:170
+0x400820f4: heap_caps_malloc at D:/Espressif/frameworks/esp-idf-v5.3.1/components/heap/heap_caps.c:84
+0x40082129: heap_caps_malloc_default at D:/Espressif/frameworks/esp-idf-v5.3.1/components/heap/heap_caps.c:110
+0x400921ad: malloc at D:/Espressif/frameworks/esp-idf-v5.3.1/components/newlib/heap.c:24
+0x4008512d: wifi_malloc at D:/Espressif/frameworks/esp-idf-v5.3.1/components/esp_wifi/esp32/esp_adapter.c:79
+0x4011d637: ieee80211_timer_process at ??:?
+0x40125f5f: pp_timer_process at ??:?
+0x401235c1: lmac_stop_hw_txq at ??:?
+0x4012be5a: timer_process_alarm at D:/Espressif/frameworks/esp-idf-v5.3.1/components/esp_timer/src/esp_timer.c:456
+0x4012bea9: timer_task at D:/Espressif/frameworks/esp-idf-v5.3.1/components/esp_timer/src/esp_timer.c:482 (discriminator 1)
+0x4008aef1: vPortTaskWrapper at D:/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x4008fae6: remove_free_block at D:/Espressif/frameworks/esp-idf-v5.3.1/components/heap/tlsf/tlsf.c:332
+ (inlined by) block_locate_free at D:/Espressif/frameworks/esp-idf-v5.3.1/components/heap/tlsf/tlsf.c:567
+ (inlined by) tlsf_malloc at D:/Espressif/frameworks/esp-idf-v5.3.1/components/heap/tlsf/tlsf.c:1015
+[0m
+[0;33m0x4000c2e0: memcpy in ROM
+0x4000c2f6: memcpy in ROM
+[0m
+[0;33m0x4008fae3: remove_free_block at D:/Espressif/frameworks/esp-idf-v5.3.1/components/heap/tlsf/tlsf.c:331 (discriminator 1)
+ (inlined by) block_locate_free at D:/Espressif/frameworks/esp-idf-v5.3.1/components/heap/tlsf/tlsf.c:567 (discriminator 1)
+ (inlined by) tlsf_malloc at D:/Espressif/frameworks/esp-idf-v5.3.1/components/heap/tlsf/tlsf.c:1015 (discriminator 1)
+0x4008f481: multi_heap_malloc_impl at D:/Espressif/frameworks/esp-idf-v5.3.1/components/heap/multi_heap.c:211
+0x400822f9: aligned_or_unaligned_alloc at D:/Espressif/frameworks/esp-idf-v5.3.1/components/heap/heap_caps_base.c:77
+0x40082405: heap_caps_aligned_alloc_base at D:/Espressif/frameworks/esp-idf-v5.3.1/components/heap/heap_caps_base.c:150
+0x40082435: heap_caps_malloc_base at D:/Espressif/frameworks/esp-idf-v5.3.1/components/heap/heap_caps_base.c:170
+0x400820f4: heap_caps_malloc at D:/Espressif/frameworks/esp-idf-v5.3.1/components/heap/heap_caps.c:84
+0x40082129: heap_caps_malloc_default at D:/Espressif/frameworks/esp-idf-v5.3.1/components/heap/heap_caps.c:110
+0x400921ad: malloc at D:/Espressif/frameworks/esp-idf-v5.3.1/components/newlib/heap.c:24
+0x4008512d: wifi_malloc at D:/Espressif/frameworks/esp-idf-v5.3.1/components/esp_wifi/esp32/esp_adapter.c:79
+0x4011d637: ieee80211_timer_process at ??:?
+0x40125f5f: pp_timer_process at ??:?
+0x401235e1: lmac_stop_hw_txq at ??:?
+0x4012be5a: timer_process_alarm at D:/Espressif/frameworks/esp-idf-v5.3.1/components/esp_timer/src/esp_timer.c:456
+0x4012bea9: timer_task at D:/Espressif/frameworks/esp-idf-v5.3.1/components/esp_timer/src/esp_timer.c:482 (discriminator 1)
+0x4008aef1: vPortTaskWrapper at D:/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x4008fae6: remove_free_block at D:/Espressif/frameworks/esp-idf-v5.3.1/components/heap/tlsf/tlsf.c:332
+ (inlined by) block_locate_free at D:/Espressif/frameworks/esp-idf-v5.3.1/components/heap/tlsf/tlsf.c:567
+ (inlined by) tlsf_malloc at D:/Espressif/frameworks/esp-idf-v5.3.1/components/heap/tlsf/tlsf.c:1015
+[0m
+[0;33m0x4000c2e0: memcpy in ROM
+0x4000c2f6: memcpy in ROM
+[0m
+[0;33m0x4008fae3: remove_free_block at D:/Espressif/frameworks/esp-idf-v5.3.1/components/heap/tlsf/tlsf.c:331 (discriminator 1)
+ (inlined by) block_locate_free at D:/Espressif/frameworks/esp-idf-v5.3.1/components/heap/tlsf/tlsf.c:567 (discriminator 1)
+ (inlined by) tlsf_malloc at D:/Espressif/frameworks/esp-idf-v5.3.1/components/heap/tlsf/tlsf.c:1015 (discriminator 1)
+0x4008f481: multi_heap_malloc_impl at D:/Espressif/frameworks/esp-idf-v5.3.1/components/heap/multi_heap.c:211
+0x400822f9: aligned_or_unaligned_alloc at D:/Espressif/frameworks/esp-idf-v5.3.1/components/heap/heap_caps_base.c:77
+0x40082405: heap_caps_aligned_alloc_base at D:/Espressif/frameworks/esp-idf-v5.3.1/components/heap/heap_caps_base.c:150
+0x40082435: heap_caps_malloc_base at D:/Espressif/frameworks/esp-idf-v5.3.1/components/heap/heap_caps_base.c:170
+0x400820f4: heap_caps_malloc at D:/Espressif/frameworks/esp-idf-v5.3.1/components/heap/heap_caps.c:84
+0x40082129: heap_caps_malloc_default at D:/Espressif/frameworks/esp-idf-v5.3.1/components/heap/heap_caps.c:110
+0x400921ad: malloc at D:/Espressif/frameworks/esp-idf-v5.3.1/components/newlib/heap.c:24
+0x4008512d: wifi_malloc at D:/Espressif/frameworks/esp-idf-v5.3.1/components/esp_wifi/esp32/esp_adapter.c:79
+0x4011d637: ieee80211_timer_process at ??:?
+0x40125f5f: pp_timer_process at ??:?
+0x401235e1: lmac_stop_hw_txq at ??:?
+0x4012be5a: timer_process_alarm at D:/Espressif/frameworks/esp-idf-v5.3.1/components/esp_timer/src/esp_timer.c:456
+0x4012bea9: timer_task at D:/Espressif/frameworks/esp-idf-v5.3.1/components/esp_timer/src/esp_timer.c:482 (discriminator 1)
+0x4008aef1: vPortTaskWrapper at D:/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x4008f7d4: remove_free_block at D:/Espressif/frameworks/esp-idf-v5.3.1/components/heap/tlsf/tlsf.c:333
+ (inlined by) block_remove at D:/Espressif/frameworks/esp-idf-v5.3.1/components/heap/tlsf/tlsf.c:380
+ (inlined by) block_merge_next at D:/Espressif/frameworks/esp-idf-v5.3.1/components/heap/tlsf/tlsf.c:486
+ (inlined by) tlsf_free at D:/Espressif/frameworks/esp-idf-v5.3.1/components/heap/tlsf/tlsf.c:1204
+[0m
+[0;33m0x4000c2e0: memcpy in ROM
+0x4000c2f6: memcpy in ROM
+[0m
+[0;33m0x4008f7d1: remove_free_block at D:/Espressif/frameworks/esp-idf-v5.3.1/components/heap/tlsf/tlsf.c:331 (discriminator 1)
+ (inlined by) block_remove at D:/Espressif/frameworks/esp-idf-v5.3.1/components/heap/tlsf/tlsf.c:380 (discriminator 1)
+ (inlined by) block_merge_next at D:/Espressif/frameworks/esp-idf-v5.3.1/components/heap/tlsf/tlsf.c:486 (discriminator 1)
+ (inlined by) tlsf_free at D:/Espressif/frameworks/esp-idf-v5.3.1/components/heap/tlsf/tlsf.c:1204 (discriminator 1)
+0x4008f404: multi_heap_free_impl at D:/Espressif/frameworks/esp-idf-v5.3.1/components/heap/multi_heap.c:235
+0x40082352: heap_caps_free at D:/Espressif/frameworks/esp-idf-v5.3.1/components/heap/heap_caps_base.c:70
+0x400921cd: free at D:/Espressif/frameworks/esp-idf-v5.3.1/components/newlib/heap.c:39
+0x40130754: mem_free at D:/Espressif/frameworks/esp-idf-v5.3.1/components/lwip/lwip/src/core/mem.c:236
+0x401307d3: do_memp_free_pool at D:/Espressif/frameworks/esp-idf-v5.3.1/components/lwip/lwip/src/core/memp.c:383
+0x4013080f: memp_free at D:/Espressif/frameworks/esp-idf-v5.3.1/components/lwip/lwip/src/core/memp.c:440
+0x401372c1: sys_check_timeouts at D:/Espressif/frameworks/esp-idf-v5.3.1/components/lwip/lwip/src/core/timeouts.c:401
+0x4012f09a: tcpip_timeouts_mbox_fetch at D:/Espressif/frameworks/esp-idf-v5.3.1/components/lwip/lwip/src/api/tcpip.c:109
+0x4012f156: tcpip_thread at D:/Espressif/frameworks/esp-idf-v5.3.1/components/lwip/lwip/src/api/tcpip.c:142
+0x4008aef1: vPortTaskWrapper at D:/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x40081b4e: panic_abort at D:/Espressif/frameworks/esp-idf-v5.3.1/components/esp_system/panic.c:463
+0x4008a329: esp_system_abort at D:/Espressif/frameworks/esp-idf-v5.3.1/components/esp_system/port/esp_system_chip.c:92
+0x4009219d: __assert_func at D:/Espressif/frameworks/esp-idf-v5.3.1/components/newlib/assert.c:80
+0x4008fabc: block_locate_free at D:/Espressif/frameworks/esp-idf-v5.3.1/components/heap/tlsf/tlsf.c:566 (discriminator 1)
+ (inlined by) tlsf_malloc at D:/Espressif/frameworks/esp-idf-v5.3.1/components/heap/tlsf/tlsf.c:1015 (discriminator 1)
+0x4008f481: multi_heap_malloc_impl at D:/Espressif/frameworks/esp-idf-v5.3.1/components/heap/multi_heap.c:211
+0x400822f9: aligned_or_unaligned_alloc at D:/Espressif/frameworks/esp-idf-v5.3.1/components/heap/heap_caps_base.c:77
+0x40082405: heap_caps_aligned_alloc_base at D:/Espressif/frameworks/esp-idf-v5.3.1/components/heap/heap_caps_base.c:150
+0x40082435: heap_caps_malloc_base at D:/Espressif/frameworks/esp-idf-v5.3.1/components/heap/heap_caps_base.c:170
+0x400820f4: heap_caps_malloc at D:/Espressif/frameworks/esp-idf-v5.3.1/components/heap/heap_caps.c:84
+0x40082129: heap_caps_malloc_default at D:/Espressif/frameworks/esp-idf-v5.3.1/components/heap/heap_caps.c:110
+0x400921ad: malloc at D:/Espressif/frameworks/esp-idf-v5.3.1/components/newlib/heap.c:24
+0x4008512d: wifi_malloc at D:/Espressif/frameworks/esp-idf-v5.3.1/components/esp_wifi/esp32/esp_adapter.c:79
+0x4011d637: ieee80211_timer_process at ??:?
+0x40125f5f: pp_timer_process at ??:?
+0x401235e1: lmac_stop_hw_txq at ??:?
+0x4012be5a: timer_process_alarm at D:/Espressif/frameworks/esp-idf-v5.3.1/components/esp_timer/src/esp_timer.c:456
+0x4012bea9: timer_task at D:/Espressif/frameworks/esp-idf-v5.3.1/components/esp_timer/src/esp_timer.c:482 (discriminator 1)
+0x4008aef1: vPortTaskWrapper at D:/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x40081b4e: panic_abort at D:/Espressif/frameworks/esp-idf-v5.3.1/components/esp_system/panic.c:463
+0x4008a329: esp_system_abort at D:/Espressif/frameworks/esp-idf-v5.3.1/components/esp_system/port/esp_system_chip.c:92
+0x4009219d: __assert_func at D:/Espressif/frameworks/esp-idf-v5.3.1/components/newlib/assert.c:80
+0x4008fabc: block_locate_free at D:/Espressif/frameworks/esp-idf-v5.3.1/components/heap/tlsf/tlsf.c:566 (discriminator 1)
+ (inlined by) tlsf_malloc at D:/Espressif/frameworks/esp-idf-v5.3.1/components/heap/tlsf/tlsf.c:1015 (discriminator 1)
+0x4008f481: multi_heap_malloc_impl at D:/Espressif/frameworks/esp-idf-v5.3.1/components/heap/multi_heap.c:211
+0x400822f9: aligned_or_unaligned_alloc at D:/Espressif/frameworks/esp-idf-v5.3.1/components/heap/heap_caps_base.c:77
+0x40082405: heap_caps_aligned_alloc_base at D:/Espressif/frameworks/esp-idf-v5.3.1/components/heap/heap_caps_base.c:150
+0x40082435: heap_caps_malloc_base at D:/Espressif/frameworks/esp-idf-v5.3.1/components/heap/heap_caps_base.c:170
+0x400820f4: heap_caps_malloc at D:/Espressif/frameworks/esp-idf-v5.3.1/components/heap/heap_caps.c:84
+0x40082129: heap_caps_malloc_default at D:/Espressif/frameworks/esp-idf-v5.3.1/components/heap/heap_caps.c:110
+0x400921ad: malloc at D:/Espressif/frameworks/esp-idf-v5.3.1/components/newlib/heap.c:24
+0x4008512d: wifi_malloc at D:/Espressif/frameworks/esp-idf-v5.3.1/components/esp_wifi/esp32/esp_adapter.c:79
+0x4011d637: ieee80211_timer_process at ??:?
+0x40125f5f: pp_timer_process at ??:?
+0x401235c1: lmac_stop_hw_txq at ??:?
+0x4012be5a: timer_process_alarm at D:/Espressif/frameworks/esp-idf-v5.3.1/components/esp_timer/src/esp_timer.c:456
+0x4012bea9: timer_task at D:/Espressif/frameworks/esp-idf-v5.3.1/components/esp_timer/src/esp_timer.c:482 (discriminator 1)
+0x4008aef1: vPortTaskWrapper at D:/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0m

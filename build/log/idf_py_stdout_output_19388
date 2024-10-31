@@ -1,0 +1,1015 @@
+��ɕ�bootloader[0m�ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7176
+load:0x40078000,len:15564
+ho 0 tail 12 room 4
+load:0x40080400,len:4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (31) boot: ESP-IDF v5.3.1-dirty 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Oct 24 2024 17:33:14[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (36) boot: chip revision: v3.1[0m
+[0;32mI (40) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (49) boot.esp32: SPI Flash Size : 4MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (59) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (70) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (77) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (85) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (92) boot: End of partition table[0m
+[0;32mI (96) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=26a2ch (158252) map[0m
+[0;32mI (159) esp_image: segment 1: paddr=00036a54 vaddr=3ffb0000 size=03f48h ( 16200) load[0m
+[0;32mI (165) esp_image: segment 2: paddr=0003a9a4 vaddr=40080000 size=05674h ( 22132) load[0m
+[0;32mI (174) esp_image: segment 3: paddr=00040020 vaddr=400d0020 size=9f508h (652552) map[0m
+[0;32mI (398) esp_image: segment 4: paddr=000df530 vaddr=40085674 size=12d54h ( 77140) load[0m
+[0;32mI (441) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (441) boot: Disabling RNG early entropy source...[0m
+[0;32mI (453) cpu_start: Multicore app[0m
+[0;32mI (461) cpu_start: Pro cpu start user code[0m
+[0;32mI (461) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (461) app_init: Application information:[0m
+[0;32mI (464) app_init: Project name:     mqtt_tcp[0m
+[0;32mI (469) app_init: App version:      017a3fe-dirty[0m
+[0;32mI (474) app_init: Compile time:     Oct 31 2024 19:17:00[0m
+[0;32mI (480) app_init: ELF file SHA256:  26186af57...[0m
+[0;32mI (486) app_init: ESP-IDF:          v5.3.1-dirty[0m
+[0;32mI (491) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (496) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (501) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (506) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (513) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (519) heap_init: At 3FFB8B70 len 00027490 (157 KiB): DRAM[0m
+[0;32mI (525) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (531) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (538) heap_init: At 400983C8 len 00007C38 (31 KiB): IRAM[0m
+[0;32mI (546) spi_flash: detected chip: generic[0m
+[0;32mI (549) spi_flash: flash io: dio[0m
+[0;32mI (554) main_task: Started on CPU0[0m
+[0;32mI (564) main_task: Calling app_main()[0m
+[0;32mI (564) MQTT_UART: [APP] Startup..[0m
+[0;32mI (564) MQTT_UART: [APP] Free memory: 276052 bytes[0m
+[0;32mI (564) MQTT_UART: [APP] IDF version: v5.3.1-dirty[0m
+[0;32mI (594) example_connect: Start example_connect.[0m
+I (604) wifi:wifi driver task: 3ffc0898, prio:23, stack:6656, core=0
+I (614) wifi:wifi firmware version: ccaebfa
+I (614) wifi:wifi certification version: v7.0
+I (614) wifi:config NVS flash: enabled
+I (614) wifi:config nano formating: disabled
+I (614) wifi:Init data frame dynamic rx buffer num: 32
+I (624) wifi:Init static rx mgmt buffer num: 5
+I (624) wifi:Init management short buffer num: 32
+I (634) wifi:Init dynamic tx buffer num: 32
+I (634) wifi:Init static rx buffer size: 1600
+I (644) wifi:Init static rx buffer num: 10
+I (644) wifi:Init dynamic rx buffer num: 32
+[0;32mI (644) wifi_init: rx ba win: 6[0m
+[0;32mI (654) wifi_init: accept mbox: 6[0m
+[0;32mI (654) wifi_init: tcpip mbox: 32[0m
+[0;32mI (654) wifi_init: udp mbox: 6[0m
+[0;32mI (664) wifi_init: tcp mbox: 6[0m
+[0;32mI (664) wifi_init: tcp tx win: 5760[0m
+[0;32mI (674) wifi_init: tcp rx win: 5760[0m
+[0;32mI (674) wifi_init: tcp mss: 1440[0m
+[0;32mI (674) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (684) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (694) phy_init: phy_version 4830,54550f7,Jun 20 2024,14:22:08[0m
+I (774) wifi:mode : sta (48:e7:29:98:ac:a0)
+I (774) wifi:enable tsf
+[0;32mI (774) example_connect: Connecting to asdff...[0m
+W (774) wifi:Password length matches WPA2 standards, authmode threshold changes from OPEN to WPA2
+[0;32mI (784) example_connect: Waiting for IP(s)[0m
+I (3444) wifi:new:<3,0>, old:<1,0>, ap:<255,255>, sta:<3,0>, prof:1, snd_ch_cfg:0x0
+I (3454) wifi:state: init -> auth (0xb0)
+I (3454) wifi:state: auth -> assoc (0x0)
+I (3464) wifi:state: assoc -> run (0x10)
+I (3494) wifi:connected with asdff, aid = 20, channel 3, BW20, bssid = 84:46:fe:ee:e1:68
+I (3494) wifi:security: WPA2-PSK, phy: bgn, rssi: -51
+I (3494) wifi:pm start, type: 1
+
+I (3494) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us
+I (3504) wifi:AP's beacon interval = 102400 us, DTIM period = 1
+[0;32mI (4594) example_connect: Got IPv6 event: Interface "example_netif_sta" address: fe80:0000:0000:0000:4ae7:29ff:fe98:aca0, type: ESP_IP6_ADDR_IS_LINK_LOCAL[0m
+[0;32mI (6514) esp_netif_handlers: example_netif_sta ip: 192.168.100.37, mask: 255.255.255.0, gw: 192.168.100.1[0m
+[0;32mI (6514) example_connect: Got IPv4 event: Interface "example_netif_sta" address: 192.168.100.37[0m
+[0;32mI (6524) example_common: Connected to example_netif_sta[0m
+[0;32mI (6524) example_common: - IPv4 address: 192.168.100.37,[0m
+[0;32mI (6534) example_common: - IPv6 address: fe80:0000:0000:0000:4ae7:29ff:fe98:aca0, type: ESP_IP6_ADDR_IS_LINK_LOCAL[0m
+[0;32mI (6544) MQTT_UART: MQTT_EVENT_ERROR[0m
+[0;32mI (8424) MQTT_UART: MQTT_EVENT_CONNECTED[0m
+[0;32mI (8434) MQTT_UART: sent subscribe successful[0m
+[0;32mI (8724) MQTT_UART: MQTT_EVENT_SUBSCRIBED, msg_id=43423[0m
+I (8974) wifi:<ba-add>idx:0 (ifx:0, 84:46:fe:ee:e1:68), tid:1, ssn:269, winSize:64
+[0;32mI (8974) MQTT_UART: MQTT_EVENT_SUBSCRIBED, msg_id=41185[0m
+[0;32mI (8984) MQTT_UART: MQTT_EVENT_SUBSCRIBED, msg_id=45984[0m
+[0;32mI (8984) MQTT_UART: MQTT_EVENT_SUBSCRIBED, msg_id=41139[0m
+[0;32mI (8994) MQTT_UART: MQTT_EVENT_SUBSCRIBED, msg_id=46879[0m
+[0;32mI (16554) MQTT_UART: Received data: [0m
+[0;32mI (17104) MQTT_UART: Received data: [0m
+I (18494) wifi:<ba-add>idx:1 (ifx:0, 84:46:fe:ee:e1:68), tid:0, ssn:64, winSize:64
+[0;32mI (20954) MQTT_UART: Received data: {"sensor":"Soil Moisture Sensor","data": 71.4}[0m
+[0;32mI (21324) MQTT_UART: MQTT_EVENT_DATA[0m
+TOPIC=sensor/Soil_Moisture
+DATA={"sensor":"Soil Moisture Sensor","data": 71.4}
+[0;32mI (21324) MQTT_UART: MQTT_EVENT_PUBLISHED, msg_id=43320[0m
+[0;32mI (21834) MQTT_UART: MQTT_EVENT_DATA[0m
+TOPIC=sensor/Soil_Moisture
+DATA={"sensor":"Soil Moisture Sensor","data": 71.4}
+[0;32mI (21834) MQTT_UART: MQTT_EVENT_PUBLISHED, msg_id=55637[0m
+[0;32mI (22054) MQTT_UART: Received data: {"sensor":"Air Temperature Sensor","data": 30.0}[0m
+[0;32mI (22344) MQTT_UART: MQTT_EVENT_DATA[0m
+TOPIC=sensor/Air_Temperature
+DATA={"sensor":"Air Temperature Sensor","data": 30.0}
+[0;32mI (22354) MQTT_UART: MQTT_EVENT_PUBLISHED, msg_id=4992[0m
+[0;32mI (22604) MQTT_UART: Received data: {"sensor":"Air Humidity Sensor","data": 83.0}[0m
+[0;32mI (22804) MQTT_UART: MQTT_EVENT_DATA[0m
+TOPIC=sensor/Air_Temperature
+DATA={"sensor":"Air Temperature Sensor","data": 30.0}
+[0;32mI (22804) MQTT_UART: MQTT_EVENT_PUBLISHED, msg_id=61858[0m
+[0;32mI (23304) MQTT_UART: MQTT_EVENT_DATA[0m
+TOPIC=sensor/Air_Humidity
+DATA={"sensor":"Air Humidity Sensor","data": 83.0}
+[0;32mI (23314) MQTT_UART: MQTT_EVENT_PUBLISHED, msg_id=7078[0m
+[0;32mI (23704) MQTT_UART: Received data: {"sensor":"Water pH Sensor","data": 5.2}[0m
+[0;32mI (23804) MQTT_UART: MQTT_EVENT_DATA[0m
+TOPIC=sensor/Air_Humidity
+DATA={"sensor":"Air Humidity Sensor","data": 83.0}
+[0;32mI (23804) MQTT_UART: MQTT_EVENT_PUBLISHED, msg_id=35868[0m
+[0;32mI (24304) MQTT_UART: MQTT_EVENT_DATA[0m
+TOPIC=sensor/Water_pH
+DATA={"sensor":"Water pH Sensor","data": 5.2}
+[0;32mI (24304) MQTT_UART: MQTT_EVENT_PUBLISHED, msg_id=57596[0m
+[0;32mI (24804) MQTT_UART: Received data: {"sensor":"Air Temperature Sensor","data": 27.1}[0m
+[0;32mI (24814) MQTT_UART: MQTT_EVENT_DATA[0m
+TOPIC=sensor/Water_pH
+DATA={"sensor":"Water pH Sensor","data": 5.2}
+[0;32mI (24824) MQTT_UART: MQTT_EVENT_PUBLISHED, msg_id=18320[0m
+[0;32mI (25314) MQTT_UART: MQTT_EVENT_DATA[0m
+TOPIC=sensor/Air_Temperature
+DATA={"sensor":"Air Temperature Sensor","data": 27.1}
+[0;32mI (25314) MQTT_UART: MQTT_EVENT_PUBLISHED, msg_id=8932[0m
+[0;32mI (25824) MQTT_UART: MQTT_EVENT_DATA[0m
+TOPIC=sensor/Air_Temperature
+DATA={"sensor":"Air Temperature Sensor","data": 27.1}
+[0;32mI (25834) MQTT_UART: MQTT_EVENT_PUBLISHED, msg_id=44109[0m
+[0;32mI (26334) MQTT_UART: MQTT_EVENT_DATA[0m
+TOPIC=sensor/Air_Temperature
+DATA={"sensor":"Air Temperature Sensor","data": 27.1}
+[0;32mI (26344) MQTT_UART: MQTT_EVENT_PUBLISHED, msg_id=45670[0m
+[0;32mI (26854) MQTT_UART: MQTT_EVENT_DATA[0m
+TOPIC=sensor/Air_Temperature
+DATA={"sensor":"Air Temperature Sensor","data": 27.1}
+[0;32mI (26854) MQTT_UART: MQTT_EVENT_PUBLISHED, msg_id=49476[0m
+[0;32mI (27304) MQTT_UART: MQTT_EVENT_DATA[0m
+TOPIC=sensor/Air_Temperature
+DATA={"sensor":"Air Temperature Sensor","data": 27.1}
+[0;32mI (27314) MQTT_UART: MQTT_EVENT_PUBLISHED, msg_id=47539[0m
+[0;32mI (28284) MQTT_UART: MQTT_EVENT_DATA[0m
+TOPIC=sensor/Air_Temperature
+DATA={"sensor":"Air Temperature Sensor","data": 27.1}
+[0;32mI (28294) MQTT_UART: MQTT_EVENT_PUBLISHED, msg_id=8684[0m
+[0;32mI (28534) MQTT_UART: MQTT_EVENT_DATA[0m
+TOPIC=sensor/Air_Temperature
+DATA={"sensor":"Air Temperature Sensor","data": 27.1}
+[0;32mI (28544) MQTT_UART: MQTT_EVENT_PUBLISHED, msg_id=58959[0m
+[0;32mI (28804) MQTT_UART: MQTT_EVENT_DATA[0m
+TOPIC=sensor/Air_Temperature
+DATA={"sensor":"Air Temperature Sensor","data": 27.1}
+[0;32mI (28804) MQTT_UART: MQTT_EVENT_PUBLISHED, msg_id=26579[0m
+[0;32mI (29304) MQTT_UART: MQTT_EVENT_DATA[0m
+TOPIC=sensor/Air_Temperature
+DATA={"sensor":"Air Temperature Sensor","data": 27.1}
+[0;32mI (29314) MQTT_UART: MQTT_EVENT_PUBLISHED, msg_id=50708[0m
+[0;32mI (29754) MQTT_UART: Received data: {"sensor":"Soil Moisture Sensor","data": 42.0}[0m
+[0;32mI (29824) MQTT_UART: MQTT_EVENT_DATA[0m
+TOPIC=sensor/Air_Temperature
+DATA={"sensor":"Air Temperature Sensor","data": 27.1}
+[0;32mI (29824) MQTT_UART: MQTT_EVENT_PUBLISHED, msg_id=47914[0m
+[0;32mI (30334) MQTT_UART: MQTT_EVENT_DATA[0m
+TOPIC=sensor/Soil_Moisture
+DATA={"sensor":"Soil Moisture Sensor","data": 42.0}
+[0;32mI (30334) MQTT_UART: MQTT_EVENT_PUBLISHED, msg_id=36538[0m
+[0;32mI (30844) MQTT_UART: MQTT_EVENT_DATA[0m
+TOPIC=sensor/Soil_Moisture
+DATA={"sensor":"Soil Moisture Sensor","data": 42.0}
+[0;32mI (30844) MQTT_UART: MQTT_EVENT_PUBLISHED, msg_id=53090[0m
+[0;32mI (30854) MQTT_UART: Received data: {"sensor":"Air Temperature Sensor","data": 30.0}[0m
+[0;32mI (31304) MQTT_UART: MQTT_EVENT_DATA[0m
+TOPIC=sensor/Air_Temperature
+DATA={"sensor":"Air Temperature Sensor","data": 30.0}
+[0;32mI (31304) MQTT_UART: MQTT_EVENT_PUBLISHED, msg_id=26051[0m
+[0;32mI (31804) MQTT_UART: MQTT_EVENT_DATA[0m
+TOPIC=sensor/Air_Temperature
+DATA={"sensor":"Air Temperature Sensor","data": 30.0}
+[0;32mI (31814) MQTT_UART: MQTT_EVENT_PUBLISHED, msg_id=5223[0m
+[0;32mI (31964) MQTT_UART: Received data: {"sensor":"Air Humidity Sensor","data": 83.0}[0m
+[0;32mI (32304) MQTT_UART: MQTT_EVENT_DATA[0m
+TOPIC=sensor/Air_Humidity
+DATA={"sensor":"Air Humidity Sensor","data": 83.0}
+[0;32mI (32314) MQTT_UART: MQTT_EVENT_PUBLISHED, msg_id=10917[0m
+[0;32mI (32804) MQTT_UART: MQTT_EVENT_DATA[0m
+TOPIC=sensor/Air_Humidity
+DATA={"sensor":"Air Humidity Sensor","data": 83.0}
+[0;32mI (32804) MQTT_UART: MQTT_EVENT_PUBLISHED, msg_id=49699[0m
+[0;32mI (33064) MQTT_UART: Received data: {"sensor":"Water pH Sensor","data": 8.1}[0m
+[0;32mI (33304) MQTT_UART: MQTT_EVENT_DATA[0m
+TOPIC=sensor/Air_Humidity
+DATA={"sensor":"Air Humidity Sensor","data": 83.0}
+[0;32mI (33304) MQTT_UART: MQTT_EVENT_PUBLISHED, msg_id=31501[0m
+[0;32mI (33634) MQTT_UART: Received data: {"sensor":"Air Temperature Sensor","data": 32.5}[0m
+[0;32mI (33814) MQTT_UART: MQTT_EVENT_DATA[0m
+TOPIC=sensor/Water_pH
+DATA={"sensor":"Water pH Sensor","data": 8.1}
+[0;32mI (33814) MQTT_UART: MQTT_EVENT_PUBLISHED, msg_id=13268[0m
+[0;32mI (34324) MQTT_UART: MQTT_EVENT_DATA[0m
+TOPIC=sensor/Air_Temperature
+DATA={"sensor":"Air Temperature Sensor","data": 32.5}
+[0;32mI (34334) MQTT_UART: MQTT_EVENT_PUBLISHED, msg_id=61670[0m
+[0;32mI (34844) MQTT_UART: MQTT_EVENT_DATA[0m
+TOPIC=sensor/Air_Temperature
+DATA={"sensor":"Air Temperature Sensor","data": 32.5}
+[0;32mI (34854) MQTT_UART: MQTT_EVENT_PUBLISHED, msg_id=55101[0m
+[0;32mI (35354) MQTT_UART: MQTT_EVENT_DATA[0m
+TOPIC=sensor/Air_Temperature
+DATA={"sensor":"Air Temperature Sensor","data": 32.5}
+[0;32mI (35354) MQTT_UART: MQTT_EVENT_PUBLISHED, msg_id=47425[0m
+[0;32mI (35804) MQTT_UART: MQTT_EVENT_DATA[0m
+TOPIC=sensor/Air_Temperature
+DATA={"sensor":"Air Temperature Sensor","data": 32.5}
+[0;32mI (35814) MQTT_UART: MQTT_EVENT_PUBLISHED, msg_id=59687[0m
+[0;32mI (36304) MQTT_UART: MQTT_EVENT_DATA[0m
+TOPIC=sensor/Air_Temperature
+DATA={"sensor":"Air Temperature Sensor","data": 32.5}
+[0;32mI (36304) MQTT_UART: MQTT_EVENT_PUBLISHED, msg_id=48282[0m
+[0;32mI (36824) MQTT_UART: MQTT_EVENT_DATA[0m
+TOPIC=sensor/Air_Temperature
+DATA={"sensor":"Air Temperature Sensor","data": 32.5}
+[0;32mI (36824) MQTT_UART: MQTT_EVENT_PUBLISHED, msg_id=41391[0m
+[0;32mI (37314) MQTT_UART: MQTT_EVENT_DATA[0m
+TOPIC=sensor/Air_Temperature
+DATA={"sensor":"Air Temperature Sensor","data": 32.5}
+[0;32mI (37324) MQTT_UART: MQTT_EVENT_PUBLISHED, msg_id=19447[0m
+[0;32mI (37814) MQTT_UART: MQTT_EVENT_DATA[0m
+TOPIC=sensor/Air_Temperature
+DATA={"sensor":"Air Temperature Sensor","data": 32.5}
+[0;32mI (37814) MQTT_UART: MQTT_EVENT_PUBLISHED, msg_id=43565[0m
+[0;32mI (38324) MQTT_UART: MQTT_EVENT_DATA[0m
+TOPIC=sensor/Air_Temperature
+DATA={"sensor":"Air Temperature Sensor","data": 32.5}
+[0;32mI (38324) MQTT_UART: MQTT_EVENT_PUBLISHED, msg_id=16174[0m
+[0;32mI (38834) MQTT_UART: MQTT_EVENT_DATA[0m
+TOPIC=sensor/Air_Temperature
+DATA={"sensor":"Air Temperature Sensor","data": 32.5}
+[0;32mI (38834) MQTT_UART: MQTT_EVENT_PUBLISHED, msg_id=41539[0m
+[0;32mI (39134) MQTT_UART: Received data: {"sensor":"Soil Moisture Sensor","data": 16.6}[0m
+[0;32mI (39344) MQTT_UART: MQTT_EVENT_DATA[0m
+TOPIC=sensor/Air_Temperature
+DATA={"sensor":"Air Temperature Sensor","data": 32.5}
+[0;32mI (39354) MQTT_UART: MQTT_EVENT_PUBLISHED, msg_id=45711[0m
+[0;32mI (39684) MQTT_UART: Received data: {"sensor":"Air Temperature Sensor","data": 30.0}[0m
+[0;32mI (39804) MQTT_UART: MQTT_EVENT_DATA[0m
+TOPIC=sensor/Soil_Moisture
+DATA={"sensor":"Soil Moisture Sensor","data": 16.6}
+[0;32mI (39804) MQTT_UART: MQTT_EVENT_PUBLISHED, msg_id=45253[0m
+[0;32mI (40304) MQTT_UART: MQTT_EVENT_DATA[0m
+TOPIC=sensor/Air_Temperature
+DATA={"sensor":"Air Temperature Sensor","data": 30.0}
+[0;32mI (40304) MQTT_UART: MQTT_EVENT_PUBLISHED, msg_id=64242[0m
+[0;32mI (40784) MQTT_UART: Received data: {"sensor":"Air Humidity Sensor","data": 83.0}[0m
+[0;32mI (40804) MQTT_UART: MQTT_EVENT_DATA[0m
+TOPIC=sensor/Air_Temperature
+DATA={"sensor":"Air Temperature Sensor","data": 30.0}
+[0;32mI (40814) MQTT_UART: MQTT_EVENT_PUBLISHED, msg_id=14731[0m
+[0;32mI (41304) MQTT_UART: MQTT_EVENT_DATA[0m
+TOPIC=sensor/Air_Humidity
+DATA={"sensor":"Air Humidity Sensor","data": 83.0}
+[0;32mI (41304) MQTT_UART: MQTT_EVENT_PUBLISHED, msg_id=38485[0m
+[0;32mI (41804) MQTT_UART: MQTT_EVENT_DATA[0m
+TOPIC=sensor/Air_Humidity
+DATA={"sensor":"Air Humidity Sensor","data": 83.0}
+[0;32mI (41804) MQTT_UART: MQTT_EVENT_PUBLISHED, msg_id=62196[0m
+[0;32mI (41884) MQTT_UART: Received data: {"sensor":"Water pH Sensor","data": 10.7}[0m
+[0;32mI (42314) MQTT_UART: MQTT_EVENT_DATA[0m
+TOPIC=sensor/Water_pH
+DATA={"sensor":"Water pH Sensor","data": 10.7}
+[0;32mI (42314) MQTT_UART: MQTT_EVENT_PUBLISHED, msg_id=16548[0m
+[0;32mI (42844) MQTT_UART: MQTT_EVENT_DATA[0m
+TOPIC=sensor/Water_pH
+DATA={"sensor":"Water pH Sensor","data": 10.7}
+[0;32mI (42854) MQTT_UART: MQTT_EVENT_PUBLISHED, msg_id=37948[0m
+[0;32mI (42984) MQTT_UART: Received data: {"sensor":"Air Temperature Sensor","data": 38.8}[0m
+[0;32mI (43334) MQTT_UART: MQTT_EVENT_DATA[0m
+TOPIC=sensor/Air_Temperature
+DATA={"sensor":"Air Temperature Sensor","data": 38.8}
+[0;32mI (43344) MQTT_UART: MQTT_EVENT_PUBLISHED, msg_id=25821[0m
+[0;32mI (43854) MQTT_UART: MQTT_EVENT_DATA[0m
+TOPIC=sensor/Air_Temperature
+DATA={"sensor":"Air Temperature Sensor","data": 38.8}
+[0;32mI (43854) MQTT_UART: MQTT_EVENT_PUBLISHED, msg_id=9542[0m
+[0;32mI (44304) MQTT_UART: MQTT_EVENT_DATA[0m
+TOPIC=sensor/Air_Temperature
+DATA={"sensor":"Air Temperature Sensor","data": 38.8}
+[0;32mI (44304) MQTT_UART: MQTT_EVENT_PUBLISHED, msg_id=1819[0m
+[0;32mI (44804) MQTT_UART: MQTT_EVENT_DATA[0m
+TOPIC=sensor/Air_Temperature
+DATA={"sensor":"Air Temperature Sensor","data": 38.8}
+[0;32mI (44804) MQTT_UART: MQTT_EVENT_PUBLISHED, msg_id=12640[0m
+[0;32mI (45304) MQTT_UART: MQTT_EVENT_DATA[0m
+TOPIC=sensor/Air_Temperature
+DATA={"sensor":"Air Temperature Sensor","data": 38.8}
+[0;32mI (45314) MQTT_UART: MQTT_EVENT_PUBLISHED, msg_id=45945[0m
+[0;32mI (45804) MQTT_UART: MQTT_EVENT_DATA[0m
+TOPIC=sensor/Air_Temperature
+DATA={"sensor":"Air Temperature Sensor","data": 38.8}
+[0;32mI (45804) MQTT_UART: MQTT_EVENT_PUBLISHED, msg_id=34723[0m
+[0;32mI (46304) MQTT_UART: MQTT_EVENT_DATA[0m
+TOPIC=sensor/Air_Temperature
+DATA={"sensor":"Air Temperature Sensor","data": 38.8}
+[0;32mI (46314) MQTT_UART: MQTT_EVENT_PUBLISHED, msg_id=9178[0m
+[0;32mI (46824) MQTT_UART: MQTT_EVENT_DATA[0m
+TOPIC=sensor/Air_Temperature
+DATA={"sensor":"Air Temperature Sensor","data": 38.8}
+[0;32mI (46824) MQTT_UART: MQTT_EVENT_PUBLISHED, msg_id=56156[0m
+[0;32mI (47334) MQTT_UART: MQTT_EVENT_DATA[0m
+TOPIC=sensor/Air_Temperature
+DATA={"sensor":"Air Temperature Sensor","data": 38.8}
+[0;32mI (47334) MQTT_UART: MQTT_EVENT_PUBLISHED, msg_id=32928[0m
+[0;32mI (47844) MQTT_UART: MQTT_EVENT_DATA[0m
+TOPIC=sensor/Air_Temperature
+DATA={"sensor":"Air Temperature Sensor","data": 38.8}
+[0;32mI (47844) MQTT_UART: MQTT_EVENT_PUBLISHED, msg_id=16989[0m
+[0;32mI (47934) MQTT_UART: Received data: {"sensor":"Soil Moisture Sensor","data": 82.3}[0m
+[0;32mI (48304) MQTT_UART: MQTT_EVENT_DATA[0m
+TOPIC=sensor/Soil_Moisture
+DATA={"sensor":"Soil Moisture Sensor","data": 82.3}
+[0;32mI (48304) MQTT_UART: MQTT_EVENT_PUBLISHED, msg_id=3310[0m
+[0;32mI (48804) MQTT_UART: MQTT_EVENT_DATA[0m
+TOPIC=sensor/Soil_Moisture
+DATA={"sensor":"Soil Moisture Sensor","data": 82.3}
+[0;32mI (48804) MQTT_UART: MQTT_EVENT_PUBLISHED, msg_id=16480[0m
+[0;32mI (49034) MQTT_UART: Received data: {"sensor":"Air Temperature Sensor","data": 30.0}[0m
+[0;32mI (49304) MQTT_UART: MQTT_EVENT_DATA[0m
+TOPIC=sensor/Air_Temperature
+DATA={"sensor":"Air Temperature Sensor","data": 30.0}
+[0;32mI (49314) MQTT_UART: MQTT_EVENT_PUBLISHED, msg_id=58315[0m
+[0;32mI (49804) MQTT_UART: MQTT_EVENT_DATA[0m
+TOPIC=sensor/Air_Temperature
+DATA={"sensor":"Air Temperature Sensor","data": 30.0}
+[0;32mI (49804) MQTT_UART: MQTT_EVENT_PUBLISHED, msg_id=28032[0m
+[0;32mI (50134) MQTT_UART: Received data: {"sensor":"Air Humidity Sensor","data": 83.0}[0m
+[0;32mI (50314) MQTT_UART: MQTT_EVENT_DATA[0m
+TOPIC=sensor/Air_Temperature
+DATA={"sensor":"Air Temperature Sensor","data": 30.0}
+[0;32mI (50314) MQTT_UART: MQTT_EVENT_PUBLISHED, msg_id=56349[0m
+[0;32mI (50704) MQTT_UART: Received data: {"sensor":"Water pH Sensor","data": 4.3}[0m
+[0;32mI (50814) MQTT_UART: MQTT_EVENT_DATA[0m
+TOPIC=sensor/Air_Humidity
+DATA={"sensor":"Air Humidity Sensor","data": 83.0}
+[0;32mI (50814) MQTT_UART: MQTT_EVENT_PUBLISHED, msg_id=5893[0m
+[0;32mI (51324) MQTT_UART: MQTT_EVENT_DATA[0m
+TOPIC=sensor/Water_pH
+DATA={"sensor":"Water pH Sensor","data": 4.3}
+[0;32mI (51334) MQTT_UART: MQTT_EVENT_PUBLISHED, msg_id=54685[0m
+[0;32mI (51804) MQTT_UART: Received data: {"sensor":"Air Temperature Sensor","data": 25.5}[0m
+[0;32mI (51834) MQTT_UART: MQTT_EVENT_DATA[0m
+TOPIC=sensor/Water_pH
+DATA={"sensor":"Water pH Sensor","data": 4.3}
+[0;32mI (51844) MQTT_UART: MQTT_EVENT_PUBLISHED, msg_id=41605[0m
+[0;32mI (52354) MQTT_UART: MQTT_EVENT_DATA[0m
+TOPIC=sensor/Air_Temperature
+DATA={"sensor":"Air Temperature Sensor","data": 25.5}
+[0;32mI (52354) MQTT_UART: MQTT_EVENT_PUBLISHED, msg_id=65397[0m
+[0;32mI (52804) MQTT_UART: MQTT_EVENT_DATA[0m
+TOPIC=sensor/Air_Temperature
+DATA={"sensor":"Air Temperature Sensor","data": 25.5}
+[0;32mI (52804) MQTT_UART: MQTT_EVENT_PUBLISHED, msg_id=10928[0m
+[0;32mI (53314) MQTT_UART: MQTT_EVENT_DATA[0m
+TOPIC=sensor/Air_Temperature
+DATA={"sensor":"Air Temperature Sensor","data": 25.5}
+[0;32mI (53344) MQTT_UART: MQTT_EVENT_PUBLISHED, msg_id=47189[0m
+[0;32mI (53804) MQTT_UART: MQTT_EVENT_DATA[0m
+TOPIC=sensor/Air_Temperature
+DATA={"sensor":"Air Temperature Sensor","data": 25.5}
+[0;32mI (53814) MQTT_UART: MQTT_EVENT_PUBLISHED, msg_id=31720[0m
+[0;32mI (54304) MQTT_UART: MQTT_EVENT_DATA[0m
+TOPIC=sensor/Air_Temperature
+DATA={"sensor":"Air Temperature Sensor","data": 25.5}
+[0;32mI (54314) MQTT_UART: MQTT_EVENT_PUBLISHED, msg_id=19368[0m
+[0;32mI (54804) MQTT_UART: MQTT_EVENT_DATA[0m
+TOPIC=sensor/Air_Temperature
+DATA={"sensor":"Air Temperature Sensor","data": 25.5}
+[0;32mI (54814) MQTT_UART: MQTT_EVENT_PUBLISHED, msg_id=41798[0m
+[0;32mI (55314) MQTT_UART: MQTT_EVENT_DATA[0m
+TOPIC=sensor/Air_Temperature
+DATA={"sensor":"Air Temperature Sensor","data": 25.5}
+[0;32mI (55324) MQTT_UART: MQTT_EVENT_PUBLISHED, msg_id=8119[0m
+[0;32mI (55854) MQTT_UART: MQTT_EVENT_DATA[0m
+TOPIC=sensor/Air_Temperature
+DATA={"sensor":"Air Temperature Sensor","data": 25.5}
+[0;32mI (55864) MQTT_UART: MQTT_EVENT_PUBLISHED, msg_id=10394[0m
+[0;32mI (56344) MQTT_UART: MQTT_EVENT_DATA[0m
+TOPIC=sensor/Air_Temperature
+DATA={"sensor":"Air Temperature Sensor","data": 25.5}
+[0;32mI (56344) MQTT_UART: MQTT_EVENT_PUBLISHED, msg_id=30886[0m
+[0;32mI (56754) MQTT_UART: Received data: {"sensor":"Soil Moisture Sensor","data": 83.3}[0m
+[0;32mI (56854) MQTT_UART: MQTT_EVENT_DATA[0m
+TOPIC=sensor/Air_Temperature
+DATA={"sensor":"Air Temperature Sensor","data": 25.5}
+[0;32mI (56864) MQTT_UART: MQTT_EVENT_PUBLISHED, msg_id=25668[0m
+[0;32mI (57474) MQTT_UART: MQTT_EVENT_DATA[0m
+TOPIC=sensor/Soil_Moisture
+DATA={"sensor":"Soil Moisture Sensor","data": 83.3}
+[0;32mI (57474) MQTT_UART: MQTT_EVENT_PUBLISHED, msg_id=36291[0m
+[0;32mI (57814) MQTT_UART: MQTT_EVENT_DATA[0m
+TOPIC=sensor/Soil_Moisture
+DATA={"sensor":"Soil Moisture Sensor","data": 83.3}
+[0;32mI (57814) MQTT_UART: MQTT_EVENT_PUBLISHED, msg_id=34486[0m
+[0;32mI (57854) MQTT_UART: Received data: {"sensor":"Air Temperature Sensor","data": 30.0}[0m
+[0;32mI (58304) MQTT_UART: MQTT_EVENT_DATA[0m
+TOPIC=sensor/Air_Temperature
+DATA={"sensor":"Air Temperature Sensor","data": 30.0}
+[0;32mI (58304) MQTT_UART: MQTT_EVENT_PUBLISHED, msg_id=13740[0m
+[0;32mI (58804) MQTT_UART: MQTT_EVENT_DATA[0m
+TOPIC=sensor/Air_Temperature
+DATA={"sensor":"Air Temperature Sensor","data": 30.0}
+[0;32mI (58814) MQTT_UART: MQTT_EVENT_PUBLISHED, msg_id=3071[0m
+[0;32mI (58954) MQTT_UART: Received data: {"sensor":"Air Humidity Sensor","data": 83.0}[0m
+[0;32mI (59314) MQTT_UART: MQTT_EVENT_DATA[0m
+TOPIC=sensor/Air_Humidity
+DATA={"sensor":"Air Humidity Sensor","data": 83.0}
+[0;32mI (59324) MQTT_UART: MQTT_EVENT_PUBLISHED, msg_id=47578[0m
+[0;32mI (59824) MQTT_UART: MQTT_EVENT_DATA[0m
+TOPIC=sensor/Air_Humidity
+DATA={"sensor":"Air Humidity Sensor","data": 83.0}
+[0;32mI (59834) MQTT_UART: MQTT_EVENT_PUBLISHED, msg_id=25330[0m
+[0;32mI (60054) MQTT_UART: Received data: {"sensor":"Water pH Sensor","data": 4.1}[0m
+[0;32mI (60334) MQTT_UART: MQTT_EVENT_DATA[0m
+TOPIC=sensor/Water_pH
+DATA={"sensor":"Water pH Sensor","data": 4.1}
+[0;32mI (60344) MQTT_UART: MQTT_EVENT_PUBLISHED, msg_id=13954[0m
+[0;32mI (60804) MQTT_UART: MQTT_EVENT_DATA[0m
+TOPIC=sensor/Water_pH
+DATA={"sensor":"Water pH Sensor","data": 4.1}
+[0;32mI (60804) MQTT_UART: MQTT_EVENT_PUBLISHED, msg_id=52195[0m
+[0;32mI (61154) MQTT_UART: Received data: {"sensor":"Air Temperature Sensor","data": 24.6}[0m
+[0;32mI (61304) MQTT_UART: MQTT_EVENT_DATA[0m
+TOPIC=sensor/Water_pH
+DATA={"sensor":"Water pH Sensor","data": 4.1}
+[0;32mI (61304) MQTT_UART: MQTT_EVENT_PUBLISHED, msg_id=16686[0m
+[0;32mI (61814) MQTT_UART: MQTT_EVENT_DATA[0m
+TOPIC=sensor/Air_Temperature
+DATA={"sensor":"Air Temperature Sensor","data": 24.6}
+[0;32mI (61814) MQTT_UART: MQTT_EVENT_PUBLISHED, msg_id=38960[0m
+[0;32mI (62304) MQTT_UART: MQTT_EVENT_DATA[0m
+TOPIC=sensor/Air_Temperature
+DATA={"sensor":"Air Temperature Sensor","data": 24.6}
+[0;32mI (62304) MQTT_UART: MQTT_EVENT_PUBLISHED, msg_id=41923[0m
+[0;32mI (62804) MQTT_UART: MQTT_EVENT_DATA[0m
+TOPIC=sensor/Air_Temperature
+DATA={"sensor":"Air Temperature Sensor","data": 24.6}
+[0;32mI (62804) MQTT_UART: MQTT_EVENT_PUBLISHED, msg_id=16660[0m
+[0;32mI (63304) MQTT_UART: MQTT_EVENT_DATA[0m
+TOPIC=sensor/Air_Temperature
+DATA={"sensor":"Air Temperature Sensor","data": 24.6}
+[0;32mI (63314) MQTT_UART: MQTT_EVENT_PUBLISHED, msg_id=18849[0m
+[0;32mI (63824) MQTT_UART: MQTT_EVENT_DATA[0m
+TOPIC=sensor/Air_Temperature
+DATA={"sensor":"Air Temperature Sensor","data": 24.6}
+[0;32mI (63834) MQTT_UART: MQTT_EVENT_PUBLISHED, msg_id=40939[0m
+[0;32mI (64334) MQTT_UART: MQTT_EVENT_DATA[0m
+TOPIC=sensor/Air_Temperature
+DATA={"sensor":"Air Temperature Sensor","data": 24.6}
+[0;32mI (64334) MQTT_UART: MQTT_EVENT_PUBLISHED, msg_id=4943[0m
+[0;32mI (64844) MQTT_UART: MQTT_EVENT_DATA[0m
+TOPIC=sensor/Air_Temperature
+DATA={"sensor":"Air Temperature Sensor","data": 24.6}
+[0;32mI (64844) MQTT_UART: MQTT_EVENT_PUBLISHED, msg_id=46147[0m
+[0;32mI (65304) MQTT_UART: MQTT_EVENT_DATA[0m
+TOPIC=sensor/Air_Temperature
+DATA={"sensor":"Air Temperature Sensor","data": 24.6}
+[0;32mI (65304) MQTT_UART: MQTT_EVENT_PUBLISHED, msg_id=58303[0m
+[0;32mI (65864) MQTT_UART: MQTT_EVENT_DATA[0m
+TOPIC=sensor/Air_Temperature
+DATA={"sensor":"Air Temperature Sensor","data": 24.6}
+[0;32mI (65874) MQTT_UART: MQTT_EVENT_PUBLISHED, msg_id=14370[0m
+[0;32mI (66104) MQTT_UART: Received data: {"sensor":"Soil Moisture Sensor","data": 21.5}[0m
+[0;32mI (66324) MQTT_UART: MQTT_EVENT_DATA[0m
+TOPIC=sensor/Air_Temperature
+DATA={"sensor":"Air Temperature Sensor","data": 24.6}
+[0;32mI (66334) MQTT_UART: MQTT_EVENT_PUBLISHED, msg_id=25984[0m
+[0;32mI (66804) MQTT_UART: MQTT_EVENT_DATA[0m
+TOPIC=sensor/Soil_Moisture
+DATA={"sensor":"Soil Moisture Sensor","data": 21.5}
+[0;32mI (66804) MQTT_UART: MQTT_EVENT_PUBLISHED, msg_id=57694[0m
+[0;32mI (67204) MQTT_UART: Received data: {"sensor":"Air Temperature Sensor","data": 30.0}[0m
+[0;32mI (67304) MQTT_UART: MQTT_EVENT_DATA[0m
+TOPIC=sensor/Soil_Moisture
+DATA={"sensor":"Soil Moisture Sensor","data": 21.5}
+[0;32mI (67314) MQTT_UART: MQTT_EVENT_PUBLISHED, msg_id=60233[0m
+[0;32mI (67774) MQTT_UART: Received data: {"sensor":"Air Humidity Sensor","data": 83.0}[0m
+[0;32mI (67814) MQTT_UART: MQTT_EVENT_DATA[0m
+TOPIC=sensor/Air_Temperature
+DATA={"sensor":"Air Temperature Sensor","data": 30.0}
+[0;32mI (67814) MQTT_UART: MQTT_EVENT_PUBLISHED, msg_id=12637[0m
+[0;32mI (68324) MQTT_UART: MQTT_EVENT_DATA[0m
+TOPIC=sensor/Air_Humidity
+DATA={"sensor":"Air Humidity Sensor","data": 83.0}
+[0;32mI (68324) MQTT_UART: MQTT_EVENT_PUBLISHED, msg_id=59693[0m
+[0;32mI (68834) MQTT_UART: MQTT_EVENT_DATA[0m
+TOPIC=sensor/Air_Humidity
+DATA={"sensor":"Air Humidity Sensor","data": 83.0}
+[0;32mI (68844) MQTT_UART: MQTT_EVENT_PUBLISHED, msg_id=32901[0m
+[0;32mI (68874) MQTT_UART: Received data: {"sensor":"Water pH Sensor","data": 10.0}[0m
+[0;32mI (69354) MQTT_UART: MQTT_EVENT_DATA[0m
+TOPIC=sensor/Water_pH
+DATA={"sensor":"Water pH Sensor","data": 10.0}
+[0;32mI (69354) MQTT_UART: MQTT_EVENT_PUBLISHED, msg_id=25530[0m
+[0;32mI (69804) MQTT_UART: MQTT_EVENT_DATA[0m
+TOPIC=sensor/Water_pH
+DATA={"sensor":"Water pH Sensor","data": 10.0}
+[0;32mI (69804) MQTT_UART: MQTT_EVENT_PUBLISHED, msg_id=23934[0m
+[0;32mI (69974) MQTT_UART: Received data: {"sensor":"Air Temperature Sensor","data": 36.5}[0m
+[0;32mI (70314) MQTT_UART: MQTT_EVENT_DATA[0m
+TOPIC=sensor/Air_Temperature
+DATA={"sensor":"Air Temperature Sensor","data": 36.5}
+[0;32mI (70314) MQTT_UART: MQTT_EVENT_PUBLISHED, msg_id=41741[0m
+[0;32mI (70804) MQTT_UART: MQTT_EVENT_DATA[0m
+TOPIC=sensor/Air_Temperature
+DATA={"sensor":"Air Temperature Sensor","data": 36.5}
+[0;32mI (70804) MQTT_UART: MQTT_EVENT_PUBLISHED, msg_id=33353[0m
+[0;32mI (71304) MQTT_UART: MQTT_EVENT_DATA[0m
+TOPIC=sensor/Air_Temperature
+DATA={"sensor":"Air Temperature Sensor","data": 36.5}
+[0;32mI (71314) MQTT_UART: MQTT_EVENT_PUBLISHED, msg_id=65108[0m
+[0;32mI (71804) MQTT_UART: MQTT_EVENT_DATA[0m
+TOPIC=sensor/Air_Temperature
+DATA={"sensor":"Air Temperature Sensor","data": 36.5}
+[0;32mI (71814) MQTT_UART: MQTT_EVENT_PUBLISHED, msg_id=24891[0m
+[0;32mI (72314) MQTT_UART: MQTT_EVENT_DATA[0m
+TOPIC=sensor/Air_Temperature
+DATA={"sensor":"Air Temperature Sensor","data": 36.5}
+[0;32mI (72324) MQTT_UART: MQTT_EVENT_PUBLISHED, msg_id=18767[0m
+[0;32mI (72834) MQTT_UART: MQTT_EVENT_DATA[0m
+TOPIC=sensor/Air_Temperature
+DATA={"sensor":"Air Temperature Sensor","data": 36.5}
+[0;32mI (72834) MQTT_UART: MQTT_EVENT_PUBLISHED, msg_id=24376[0m
+[0;32mI (73344) MQTT_UART: MQTT_EVENT_DATA[0m
+TOPIC=sensor/Air_Temperature
+DATA={"sensor":"Air Temperature Sensor","data": 36.5}
+[0;32mI (73344) MQTT_UART: MQTT_EVENT_PUBLISHED, msg_id=31461[0m
+[0;32mI (73854) MQTT_UART: MQTT_EVENT_DATA[0m
+TOPIC=sensor/Air_Temperature
+DATA={"sensor":"Air Temperature Sensor","data": 36.5}
+[0;32mI (73864) MQTT_UART: MQTT_EVENT_PUBLISHED, msg_id=45336[0m
+[0;32mI (74314) MQTT_UART: MQTT_EVENT_DATA[0m
+TOPIC=sensor/Air_Temperature
+DATA={"sensor":"Air Temperature Sensor","data": 36.5}
+[0;32mI (74324) MQTT_UART: MQTT_EVENT_PUBLISHED, msg_id=54641[0m
+[0;32mI (74804) MQTT_UART: MQTT_EVENT_DATA[0m
+TOPIC=sensor/Air_Temperature
+DATA={"sensor":"Air Temperature Sensor","data": 36.5}
+[0;32mI (74814) MQTT_UART: MQTT_EVENT_PUBLISHED, msg_id=15847[0m
+[0;32mI (74924) MQTT_UART: Received data: {"sensor":"Soil Moisture Sensor","data": 16.2}[0m
+[0;32mI (75304) MQTT_UART: MQTT_EVENT_DATA[0m
+TOPIC=sensor/Soil_Moisture
+DATA={"sensor":"Soil Moisture Sensor","data": 16.2}
+[0;32mI (75304) MQTT_UART: MQTT_EVENT_PUBLISHED, msg_id=46148[0m
+[0;32mI (75804) MQTT_UART: MQTT_EVENT_DATA[0m
+TOPIC=sensor/Soil_Moisture
+DATA={"sensor":"Soil Moisture Sensor","data": 16.2}
+[0;32mI (75804) MQTT_UART: MQTT_EVENT_PUBLISHED, msg_id=61315[0m
+[0;32mI (76024) MQTT_UART: Received data: {"sensor":"Air Temperature Sensor","data": 30.0}[0m
+[0;32mI (76314) MQTT_UART: MQTT_EVENT_DATA[0m
+TOPIC=sensor/Air_Temperature
+DATA={"sensor":"Air Temperature Sensor","data": 30.0}
+[0;32mI (76314) MQTT_UART: MQTT_EVENT_PUBLISHED, msg_id=12465[0m
+[0;32mI (76824) MQTT_UART: MQTT_EVENT_DATA[0m
+TOPIC=sensor/Air_Temperature
+DATA={"sensor":"Air Temperature Sensor","data": 30.0}
+[0;32mI (76834) MQTT_UART: MQTT_EVENT_PUBLISHED, msg_id=65051[0m
+[0;32mI (77124) MQTT_UART: Received data: {"sensor":"Air Humidity Sensor","data": 83.0}[0m
+[0;32mI (77334) MQTT_UART: MQTT_EVENT_DATA[0m
+TOPIC=sensor/Air_Temperature
+DATA={"sensor":"Air Temperature Sensor","data": 30.0}
+[0;32mI (77344) MQTT_UART: MQTT_EVENT_PUBLISHED, msg_id=47966[0m
+[0;32mI (77844) MQTT_UART: MQTT_EVENT_DATA[0m
+TOPIC=sensor/Air_Humidity
+DATA={"sensor":"Air Humidity Sensor","data": 83.0}
+[0;32mI (77854) MQTT_UART: MQTT_EVENT_PUBLISHED, msg_id=5186[0m
+[0;32mI (78224) MQTT_UART: Received data: {"sensor":"Water pH Sensor","data": 10.6}[0m
+[0;32mI (78304) MQTT_UART: MQTT_EVENT_DATA[0m
+TOPIC=sensor/Air_Humidity
+DATA={"sensor":"Air Humidity Sensor","data": 83.0}
+[0;32mI (78304) MQTT_UART: MQTT_EVENT_PUBLISHED, msg_id=53596[0m
+[0;32mI (78814) MQTT_UART: MQTT_EVENT_DATA[0m
+TOPIC=sensor/Water_pH
+DATA={"sensor":"Water pH Sensor","data": 10.6}
+[0;32mI (78814) MQTT_UART: MQTT_EVENT_PUBLISHED, msg_id=23312[0m
+[0;32mI (79304) MQTT_UART: MQTT_EVENT_DATA[0m
+TOPIC=sensor/Water_pH
+DATA={"sensor":"Water pH Sensor","data": 10.6}
+[0;32mI (79314) MQTT_UART: MQTT_EVENT_PUBLISHED, msg_id=64468[0m
+[0;32mI (79324) MQTT_UART: Received data: {"sensor":"Air Temperature Sensor","data": 38.4}[0m
+[0;32mI (79804) MQTT_UART: MQTT_EVENT_DATA[0m
+TOPIC=sensor/Air_Temperature
+DATA={"sensor":"Air Temperature Sensor","data": 38.4}
+[0;32mI (79814) MQTT_UART: MQTT_EVENT_PUBLISHED, msg_id=59133[0m
+[0;32mI (80304) MQTT_UART: MQTT_EVENT_DATA[0m
+TOPIC=sensor/Air_Temperature
+DATA={"sensor":"Air Temperature Sensor","data": 38.4}
+[0;32mI (80314) MQTT_UART: MQTT_EVENT_PUBLISHED, msg_id=32275[0m
+[0;32mI (80814) MQTT_UART: MQTT_EVENT_DATA[0m
+TOPIC=sensor/Air_Temperature
+DATA={"sensor":"Air Temperature Sensor","data": 38.4}
+[0;32mI (80824) MQTT_UART: MQTT_EVENT_PUBLISHED, msg_id=17968[0m
+[0;32mI (81334) MQTT_UART: MQTT_EVENT_DATA[0m
+TOPIC=sensor/Air_Temperature
+DATA={"sensor":"Air Temperature Sensor","data": 38.4}
+[0;32mI (81334) MQTT_UART: MQTT_EVENT_PUBLISHED, msg_id=47932[0m
+[0;32mI (81844) MQTT_UART: MQTT_EVENT_DATA[0m
+TOPIC=sensor/Air_Temperature
+DATA={"sensor":"Air Temperature Sensor","data": 38.4}
+[0;32mI (81844) MQTT_UART: MQTT_EVENT_PUBLISHED, msg_id=27292[0m
+[0;32mI (82354) MQTT_UART: MQTT_EVENT_DATA[0m
+TOPIC=sensor/Air_Temperature
+DATA={"sensor":"Air Temperature Sensor","data": 38.4}
+[0;32mI (82354) MQTT_UART: MQTT_EVENT_PUBLISHED, msg_id=3923[0m
+[0;32mI (82804) MQTT_UART: MQTT_EVENT_DATA[0m
+TOPIC=sensor/Air_Temperature
+DATA={"sensor":"Air Temperature Sensor","data": 38.4}
+[0;32mI (82814) MQTT_UART: MQTT_EVENT_PUBLISHED, msg_id=59833[0m
+[0;32mI (83304) MQTT_UART: MQTT_EVENT_DATA[0m
+TOPIC=sensor/Air_Temperature
+DATA={"sensor":"Air Temperature Sensor","data": 38.4}
+[0;32mI (83304) MQTT_UART: MQTT_EVENT_PUBLISHED, msg_id=8351[0m
+[0;32mI (83804) MQTT_UART: MQTT_EVENT_DATA[0m
+TOPIC=sensor/Air_Temperature
+DATA={"sensor":"Air Temperature Sensor","data": 38.4}
+[0;32mI (83804) MQTT_UART: MQTT_EVENT_PUBLISHED, msg_id=56936[0m
+[0;32mI (84274) MQTT_UART: Received data: {"sensor":"Soil Moisture Sensor","data": 16.0}[0m
+[0;32mI (84314) MQTT_UART: MQTT_EVENT_DATA[0m
+TOPIC=sensor/Air_Temperature
+DATA={"sensor":"Air Temperature Sensor","data": 38.4}
+[0;32mI (84324) MQTT_UART: MQTT_EVENT_PUBLISHED, msg_id=26658[0m
+[0;32mI (84814) MQTT_UART: MQTT_EVENT_DATA[0m
+TOPIC=sensor/Soil_Moisture
+DATA={"sensor":"Soil Moisture Sensor","data": 16.0}
+[0;32mI (84814) MQTT_UART: MQTT_EVENT_PUBLISHED, msg_id=59350[0m
+[0;32mI (84844) MQTT_UART: Received data: {"sensor":"Air Temperature Sensor","data": 30.0}[0m
+[0;32mI (85324) MQTT_UART: MQTT_EVENT_DATA[0m
+TOPIC=sensor/Air_Temperature
+DATA={"sensor":"Air Temperature Sensor","data": 30.0}
+[0;32mI (85324) MQTT_UART: MQTT_EVENT_PUBLISHED, msg_id=4611[0m
+[0;32mI (85804) MQTT_UART: MQTT_EVENT_DATA[0m
+TOPIC=sensor/Air_Temperature
+DATA={"sensor":"Air Temperature Sensor","data": 30.0}
+[0;32mI (85814) MQTT_UART: MQTT_EVENT_PUBLISHED, msg_id=64058[0m
+[0;32mI (85944) MQTT_UART: Received data: {"sensor":"Air Humidity Sensor","data": 83.0}[0m
+[0;32mI (86344) MQTT_UART: MQTT_EVENT_DATA[0m
+TOPIC=sensor/Air_Humidity
+DATA={"sensor":"Air Humidity Sensor","data": 83.0}
+[0;32mI (86354) MQTT_UART: MQTT_EVENT_PUBLISHED, msg_id=25319[0m
+[0;32mI (86804) MQTT_UART: MQTT_EVENT_DATA[0m
+TOPIC=sensor/Air_Humidity
+DATA={"sensor":"Air Humidity Sensor","data": 83.0}
+[0;32mI (86804) MQTT_UART: MQTT_EVENT_PUBLISHED, msg_id=59712[0m
+[0;32mI (87044) MQTT_UART: Received data: {"sensor":"Water pH Sensor","data": 10.7}[0m
+[0;32mI (87314) MQTT_UART: MQTT_EVENT_DATA[0m
+TOPIC=sensor/Water_pH
+DATA={"sensor":"Water pH Sensor","data": 10.7}
+[0;32mI (87324) MQTT_UART: MQTT_EVENT_PUBLISHED, msg_id=8773[0m
+[0;32mI (87804) MQTT_UART: MQTT_EVENT_DATA[0m
+TOPIC=sensor/Water_pH
+DATA={"sensor":"Water pH Sensor","data": 10.7}
+[0;32mI (87814) MQTT_UART: MQTT_EVENT_PUBLISHED, msg_id=19625[0m
+[0;32mI (88144) MQTT_UART: Received data: {"sensor":"Air Temperature Sensor","data": 38.9}[0m
+[0;32mI (88304) MQTT_UART: MQTT_EVENT_DATA[0m
+TOPIC=sensor/Water_pH
+DATA={"sensor":"Water pH Sensor","data": 10.7}
+[0;32mI (88304) MQTT_UART: MQTT_EVENT_PUBLISHED, msg_id=61790[0m
+[0;32mI (88804) MQTT_UART: MQTT_EVENT_DATA[0m
+TOPIC=sensor/Air_Temperature
+DATA={"sensor":"Air Temperature Sensor","data": 38.9}
+[0;32mI (88814) MQTT_UART: MQTT_EVENT_PUBLISHED, msg_id=24734[0m
+[0;32mI (89314) MQTT_UART: MQTT_EVENT_DATA[0m
+TOPIC=sensor/Air_Temperature
+DATA={"sensor":"Air Temperature Sensor","data": 38.9}
+[0;32mI (89324) MQTT_UART: MQTT_EVENT_PUBLISHED, msg_id=17804[0m
+[0;32mI (89834) MQTT_UART: MQTT_EVENT_DATA[0m
+TOPIC=sensor/Air_Temperature
+DATA={"sensor":"Air Temperature Sensor","data": 38.9}
+[0;32mI (89834) MQTT_UART: MQTT_EVENT_PUBLISHED, msg_id=25192[0m
+[0;32mI (90344) MQTT_UART: MQTT_EVENT_DATA[0m
+TOPIC=sensor/Air_Temperature
+DATA={"sensor":"Air Temperature Sensor","data": 38.9}
+[0;32mI (90344) MQTT_UART: MQTT_EVENT_PUBLISHED, msg_id=30287[0m
+[0;32mI (90854) MQTT_UART: MQTT_EVENT_DATA[0m
+TOPIC=sensor/Air_Temperature
+DATA={"sensor":"Air Temperature Sensor","data": 38.9}
+[0;32mI (90854) MQTT_UART: MQTT_EVENT_PUBLISHED, msg_id=46158[0m
+[0;32mI (91304) MQTT_UART: MQTT_EVENT_DATA[0m
+TOPIC=sensor/Air_Temperature
+DATA={"sensor":"Air Temperature Sensor","data": 38.9}
+[0;32mI (91314) MQTT_UART: MQTT_EVENT_PUBLISHED, msg_id=44797[0m
+[0;32mI (91804) MQTT_UART: MQTT_EVENT_DATA[0m
+TOPIC=sensor/Air_Temperature
+DATA={"sensor":"Air Temperature Sensor","data": 38.9}
+[0;32mI (91814) MQTT_UART: MQTT_EVENT_PUBLISHED, msg_id=61212[0m
+[0;32mI (92304) MQTT_UART: MQTT_EVENT_DATA[0m
+TOPIC=sensor/Air_Temperature
+DATA={"sensor":"Air Temperature Sensor","data": 38.9}
+[0;32mI (92304) MQTT_UART: MQTT_EVENT_PUBLISHED, msg_id=53315[0m
+[0;32mI (92814) MQTT_UART: MQTT_EVENT_DATA[0m
+TOPIC=sensor/Air_Temperature
+DATA={"sensor":"Air Temperature Sensor","data": 38.9}
+[0;32mI (92814) MQTT_UART: MQTT_EVENT_PUBLISHED, msg_id=33655[0m
+[0;32mI (93094) MQTT_UART: Received data: {"sensor":"Soil Moisture Sensor","data": 16.0}[0m
+[0;32mI (93314) MQTT_UART: MQTT_EVENT_DATA[0m
+TOPIC=sensor/Air_Temperature
+DATA={"sensor":"Air Temperature Sensor","data": 38.9}
+[0;32mI (93324) MQTT_UART: MQTT_EVENT_PUBLISHED, msg_id=18210[0m
+[0;32mI (93824) MQTT_UART: MQTT_EVENT_DATA[0m
+TOPIC=sensor/Soil_Moisture
+DATA={"sensor":"Soil Moisture Sensor","data": 16.0}
+[0;32mI (93824) MQTT_UART: MQTT_EVENT_PUBLISHED, msg_id=16203[0m
+[0;32mI (94194) MQTT_UART: Received data: {"sensor":"Air Temperature Sensor","data": 30.0}[0m
+[0;32mI (94334) MQTT_UART: MQTT_EVENT_DATA[0m
+TOPIC=sensor/Soil_Moisture
+DATA={"sensor":"Soil Moisture Sensor","data": 16.0}
+[0;32mI (94334) MQTT_UART: MQTT_EVENT_PUBLISHED, msg_id=20842[0m
+[0;32mI (95284) MQTT_UART: MQTT_EVENT_DATA[0m
+TOPIC=sensor/Air_Temperature
+DATA={"sensor":"Air Temperature Sensor","data": 30.0}
+[0;32mI (95294) MQTT_UART: Received data: {"sensor":"Air Humidity Sensor","data": 83.0}[0m
+[0;32mI (95294) MQTT_UART: MQTT_EVENT_PUBLISHED, msg_id=39852[0m
+[0;32mI (95574) MQTT_UART: MQTT_EVENT_DATA[0m
+TOPIC=sensor/Air_Temperature
+DATA={"sensor":"Air Temperature Sensor","data": 30.0}
+[0;32mI (95574) MQTT_UART: MQTT_EVENT_PUBLISHED, msg_id=39977[0m
+[0;32mI (95804) MQTT_UART: MQTT_EVENT_DATA[0m
+TOPIC=sensor/Air_Humidity
+DATA={"sensor":"Air Humidity Sensor","data": 83.0}
+[0;32mI (95814) MQTT_UART: MQTT_EVENT_PUBLISHED, msg_id=62681[0m
+[0;32mI (96304) MQTT_UART: MQTT_EVENT_DATA[0m
+TOPIC=sensor/Air_Humidity
+DATA={"sensor":"Air Humidity Sensor","data": 83.0}
+[0;32mI (96314) MQTT_UART: MQTT_EVENT_PUBLISHED, msg_id=48203[0m
+[0;32mI (96394) MQTT_UART: Received data: {"sensor":"Water pH Sensor","data": 10.8}[0m
+[0;32mI (96804) MQTT_UART: MQTT_EVENT_DATA[0m
+TOPIC=sensor/Water_pH
+DATA={"sensor":"Water pH Sensor","data": 10.8}
+[0;32mI (96814) MQTT_UART: MQTT_EVENT_PUBLISHED, msg_id=13028[0m
+[0;32mI (96944) MQTT_UART: Received data: {"sensor":"Air Temperature Sensor","data": 38.9}[0m
+[0;32mI (97314) MQTT_UART: MQTT_EVENT_DATA[0m
+TOPIC=sensor/Air_Temperature
+DATA={"sensor":"Air Temperature Sensor","data": 38.9}
+[0;32mI (97314) MQTT_UART: MQTT_EVENT_PUBLISHED, msg_id=60189[0m
+[0;32mI (97824) MQTT_UART: MQTT_EVENT_DATA[0m
+TOPIC=sensor/Air_Temperature
+DATA={"sensor":"Air Temperature Sensor","data": 38.9}
+[0;32mI (97824) MQTT_UART: MQTT_EVENT_PUBLISHED, msg_id=35666[0m
+[0;32mI (98334) MQTT_UART: MQTT_EVENT_DATA[0m
+TOPIC=sensor/Air_Temperature
+DATA={"sensor":"Air Temperature Sensor","data": 38.9}
+[0;32mI (98334) MQTT_UART: MQTT_EVENT_PUBLISHED, msg_id=43080[0m
+[0;32mI (98844) MQTT_UART: MQTT_EVENT_DATA[0m
+TOPIC=sensor/Air_Temperature
+DATA={"sensor":"Air Temperature Sensor","data": 38.9}
+[0;32mI (98854) MQTT_UART: MQTT_EVENT_PUBLISHED, msg_id=33817[0m
+[0;32mI (99304) MQTT_UART: MQTT_EVENT_DATA[0m
+TOPIC=sensor/Air_Temperature
+DATA={"sensor":"Air Temperature Sensor","data": 38.9}
+[0;32mI (99304) MQTT_UART: MQTT_EVENT_PUBLISHED, msg_id=55211[0m
+[0;32mI (99804) MQTT_UART: MQTT_EVENT_DATA[0m
+TOPIC=sensor/Air_Temperature
+DATA={"sensor":"Air Temperature Sensor","data": 38.9}
+[0;32mI (99814) MQTT_UART: MQTT_EVENT_PUBLISHED, msg_id=65344[0m
+[0;32mI (100324) MQTT_UART: MQTT_EVENT_DATA[0m
+TOPIC=sensor/Air_Temperature
+DATA={"sensor":"Air Temperature Sensor","data": 38.9}
+[0;32mI (100324) MQTT_UART: MQTT_EVENT_PUBLISHED, msg_id=5194[0m
+[0;32mI (100804) MQTT_UART: MQTT_EVENT_DATA[0m
+TOPIC=sensor/Air_Temperature
+DATA={"sensor":"Air Temperature Sensor","data": 38.9}
+[0;32mI (100804) MQTT_UART: MQTT_EVENT_PUBLISHED, msg_id=59637[0m
+[0;32mI (101304) MQTT_UART: MQTT_EVENT_DATA[0m
+TOPIC=sensor/Air_Temperature
+DATA={"sensor":"Air Temperature Sensor","data": 38.9}
+[0;32mI (101304) MQTT_UART: MQTT_EVENT_PUBLISHED, msg_id=43747[0m
+[0;32mI (101814) MQTT_UART: MQTT_EVENT_DATA[0m
+TOPIC=sensor/Air_Temperature
+DATA={"sensor":"Air Temperature Sensor","data": 38.9}
+[0;32mI (101814) MQTT_UART: MQTT_EVENT_PUBLISHED, msg_id=63066[0m
+[0;32mI (101914) MQTT_UART: Received data: {"sensor":"Soil Moisture Sensor","data": 16.3}[0m
+[0;32mI (102324) MQTT_UART: MQTT_EVENT_DATA[0m
+TOPIC=sensor/Soil_Moisture
+DATA={"sensor":"Soil Moisture Sensor","data": 16.3}
+[0;32mI (102334) MQTT_UART: MQTT_EVENT_PUBLISHED, msg_id=42802[0m
+[0;32mI (102834) MQTT_UART: MQTT_EVENT_DATA[0m
+TOPIC=sensor/Soil_Moisture
+DATA={"sensor":"Soil Moisture Sensor","data": 16.3}
+[0;32mI (102844) MQTT_UART: MQTT_EVENT_PUBLISHED, msg_id=34901[0m
+[0;32mI (103014) MQTT_UART: Received data: {"sensor":"Air Temperature Sensor","data": 30.0}[0m
+[0;32mI (103344) MQTT_UART: MQTT_EVENT_DATA[0m
+TOPIC=sensor/Air_Temperature
+DATA={"sensor":"Air Temperature Sensor","data": 30.0}
+[0;32mI (103354) MQTT_UART: MQTT_EVENT_PUBLISHED, msg_id=17791[0m
+[0;32mI (103804) MQTT_UART: MQTT_EVENT_DATA[0m
+TOPIC=sensor/Air_Temperature
+DATA={"sensor":"Air Temperature Sensor","data": 30.0}
+[0;32mI (103804) MQTT_UART: MQTT_EVENT_PUBLISHED, msg_id=60856[0m
+[0;32mI (104114) MQTT_UART: Received data: {"sensor":"Air Humidity Sensor","data": 83.0}[0m
+[0;32mI (104304) MQTT_UART: MQTT_EVENT_DATA[0m
+TOPIC=sensor/Air_Temperature
+DATA={"sensor":"Air Temperature Sensor","data": 30.0}
+[0;32mI (104314) MQTT_UART: MQTT_EVENT_PUBLISHED, msg_id=34433[0m
+[0;32mI (104804) MQTT_UART: MQTT_EVENT_DATA[0m
+TOPIC=sensor/Air_Humidity
+DATA={"sensor":"Air Humidity Sensor","data": 83.0}
+[0;32mI (104804) MQTT_UART: MQTT_EVENT_PUBLISHED, msg_id=42682[0m
+[0;32mI (105214) MQTT_UART: Received data: {"sensor":"Water pH Sensor","data": 10.6}[0m
+[0;32mI (105304) MQTT_UART: MQTT_EVENT_DATA[0m
+TOPIC=sensor/Air_Humidity
+DATA={"sensor":"Air Humidity Sensor","data": 83.0}
+[0;32mI (105304) MQTT_UART: MQTT_EVENT_PUBLISHED, msg_id=46581[0m
+[0;32mI (105824) MQTT_UART: MQTT_EVENT_DATA[0m
+TOPIC=sensor/Water_pH
+DATA={"sensor":"Water pH Sensor","data": 10.6}
+[0;32mI (105834) MQTT_UART: MQTT_EVENT_PUBLISHED, msg_id=1738[0m
+[0;32mI (106314) MQTT_UART: Received data: {"sensor":"Air Temperature Sensor","data": 38.4}[0m
+[0;32mI (106314) MQTT_UART: MQTT_EVENT_DATA[0m
+TOPIC=sensor/Water_pH
+DATA={"sensor":"Water pH Sensor","data": 10.6}
+[0;32mI (106324) MQTT_UART: MQTT_EVENT_PUBLISHED, msg_id=58155[0m
+[0;32mI (106824) MQTT_UART: MQTT_EVENT_DATA[0m
+TOPIC=sensor/Air_Temperature
+DATA={"sensor":"Air Temperature Sensor","data": 38.4}
+[0;32mI (106834) MQTT_UART: MQTT_EVENT_PUBLISHED, msg_id=42688[0m
+[0;32mI (107344) MQTT_UART: MQTT_EVENT_DATA[0m
+TOPIC=sensor/Air_Temperature
+DATA={"sensor":"Air Temperature Sensor","data": 38.4}
+[0;32mI (107344) MQTT_UART: MQTT_EVENT_PUBLISHED, msg_id=27041[0m
+[0;32mI (107854) MQTT_UART: MQTT_EVENT_DATA[0m
+TOPIC=sensor/Air_Temperature
+DATA={"sensor":"Air Temperature Sensor","data": 38.4}
+[0;32mI (107854) MQTT_UART: MQTT_EVENT_PUBLISHED, msg_id=1518[0m
+[0;32mI (108304) MQTT_UART: MQTT_EVENT_DATA[0m
+TOPIC=sensor/Air_Temperature
+DATA={"sensor":"Air Temperature Sensor","data": 38.4}
+[0;32mI (108304) MQTT_UART: MQTT_EVENT_PUBLISHED, msg_id=20442[0m
+[0;32mI (108804) MQTT_UART: MQTT_EVENT_DATA[0m
+TOPIC=sensor/Air_Temperature
+DATA={"sensor":"Air Temperature Sensor","data": 38.4}
+[0;32mI (108814) MQTT_UART: MQTT_EVENT_PUBLISHED, msg_id=14469[0m
+[0;32mI (109304) MQTT_UART: MQTT_EVENT_DATA[0m
+TOPIC=sensor/Air_Temperature
+DATA={"sensor":"Air Temperature Sensor","data": 38.4}
+[0;32mI (109314) MQTT_UART: MQTT_EVENT_PUBLISHED, msg_id=2150[0m
+[0;32mI (109804) MQTT_UART: MQTT_EVENT_DATA[0m
+TOPIC=sensor/Air_Temperature
+DATA={"sensor":"Air Temperature Sensor","data": 38.4}
+[0;32mI (109814) MQTT_UART: MQTT_EVENT_PUBLISHED, msg_id=17430[0m
+[0;32mI (110304) MQTT_UART: MQTT_EVENT_DATA[0m
+TOPIC=sensor/Air_Temperature
+DATA={"sensor":"Air Temperature Sensor","data": 38.4}
+[0;32mI (110314) MQTT_UART: MQTT_EVENT_PUBLISHED, msg_id=32795[0m
+[0;32mI (110824) MQTT_UART: MQTT_EVENT_DATA[0m
+TOPIC=sensor/Air_Temperature
+DATA={"sensor":"Air Temperature Sensor","data": 38.4}
+[0;32mI (110824) MQTT_UART: MQTT_EVENT_PUBLISHED, msg_id=4296[0m
+[0;32mI (111264) MQTT_UART: Received data: {"sensor":"Soil Moisture Sensor","data": 16.1}[0m
+[0;32mI (111334) MQTT_UART: MQTT_EVENT_DATA[0m
+TOPIC=sensor/Air_Temperature
+DATA={"sensor":"Air Temperature Sensor","data": 38.4}
+[0;32mI (111344) MQTT_UART: MQTT_EVENT_PUBLISHED, msg_id=19110[0m
+[0;32mI (111844) MQTT_UART: MQTT_EVENT_DATA[0m
+TOPIC=sensor/Soil_Moisture
+DATA={"sensor":"Soil Moisture Sensor","data": 16.1}
+[0;32mI (111854) MQTT_UART: MQTT_EVENT_PUBLISHED, msg_id=47677[0m
+[0;32mI (112304) MQTT_UART: MQTT_EVENT_DATA[0m
+TOPIC=sensor/Soil_Moisture
+DATA={"sensor":"Soil Moisture Sensor","data": 16.1}
+[0;32mI (112314) MQTT_UART: MQTT_EVENT_PUBLISHED, msg_id=21594[0m
+[0;32mI (112364) MQTT_UART: Received data: {"sensor":"Air Temperature Sensor","data": 30.0}[0m
+[0;32mI (112814) MQTT_UART: MQTT_EVENT_DATA[0m
+TOPIC=sensor/Air_Temperature
+DATA={"sensor":"Air Temperature Sensor","data": 30.0}
+[0;32mI (112814) MQTT_UART: MQTT_EVENT_PUBLISHED, msg_id=38110[0m
+[0;32mI (113304) MQTT_UART: MQTT_EVENT_DATA[0m
+TOPIC=sensor/Air_Temperature
+DATA={"sensor":"Air Temperature Sensor","data": 30.0}
+[0;32mI (113304) MQTT_UART: MQTT_EVENT_PUBLISHED, msg_id=57054[0m
+[0;32mI (113464) MQTT_UART: Received data: {"sensor":"Air Humidity Sensor","data": 83.0}[0m
+[0;32mI (113804) MQTT_UART: MQTT_EVENT_DATA[0m
+TOPIC=sensor/Air_Humidity
+DATA={"sensor":"Air Humidity Sensor","data": 83.0}
+[0;32mI (113804) MQTT_UART: MQTT_EVENT_PUBLISHED, msg_id=64075[0m
+[0;32mI (114014) MQTT_UART: Received data: {"sensor":"Water pH Sensor","data": 10.7}[0m
+[0;32mI (114304) MQTT_UART: MQTT_EVENT_DATA[0m
+TOPIC=sensor/Water_pH
+DATA={"sensor":"Water pH Sensor","data": 10.7}
+[0;32mI (114304) MQTT_UART: MQTT_EVENT_PUBLISHED, msg_id=63673[0m
+[0;32mI (114814) MQTT_UART: MQTT_EVENT_DATA[0m
+TOPIC=sensor/Water_pH
+DATA={"sensor":"Water pH Sensor","data": 10.7}
+[0;32mI (114824) MQTT_UART: MQTT_EVENT_PUBLISHED, msg_id=42440[0m
+[0;32mI (115114) MQTT_UART: Received data: {"sensor":"Air Temperature Sensor","data": 38.6}[0m
+[0;32mI (115334) MQTT_UART: MQTT_EVENT_DATA[0m
+TOPIC=sensor/Water_pH
+DATA={"sensor":"Water pH Sensor","data": 10.7}
+[0;32mI (115334) MQTT_UART: MQTT_EVENT_PUBLISHED, msg_id=7828[0m
+[0;32mI (115864) MQTT_UART: MQTT_EVENT_DATA[0m
+TOPIC=sensor/Air_Temperature
+DATA={"sensor":"Air Temperature Sensor","data": 38.6}
+[0;32mI (115864) MQTT_UART: MQTT_EVENT_PUBLISHED, msg_id=49598[0m
+[0;32mI (116354) MQTT_UART: MQTT_EVENT_DATA[0m
+TOPIC=sensor/Air_Temperature
+DATA={"sensor":"Air Temperature Sensor","data": 38.6}
+[0;32mI (116354) MQTT_UART: MQTT_EVENT_PUBLISHED, msg_id=64992[0m
+[0;32mI (116814) MQTT_UART: MQTT_EVENT_DATA[0m
+TOPIC=sensor/Air_Temperature
+DATA={"sensor":"Air Temperature Sensor","data": 38.6}
+[0;32mI (116814) MQTT_UART: MQTT_EVENT_PUBLISHED, msg_id=21120[0m
+[0;32mI (117784) MQTT_UART: MQTT_EVENT_DATA[0m
+TOPIC=sensor/Air_Temperature
+DATA={"sensor":"Air Temperature Sensor","data": 38.6}
+[0;32mI (117794) MQTT_UART: MQTT_EVENT_PUBLISHED, msg_id=17941[0m
+[0;32mI (118034) MQTT_UART: MQTT_EVENT_DATA[0m
+TOPIC=sensor/Air_Temperature
+DATA={"sensor":"Air Temperature Sensor","data": 38.6}
+[0;32mI (118044) MQTT_UART: MQTT_EVENT_PUBLISHED, msg_id=62789[0m
+[0;32mI (118304) MQTT_UART: MQTT_EVENT_DATA[0m
+TOPIC=sensor/Air_Temperature
+DATA={"sensor":"Air Temperature Sensor","data": 38.6}
+[0;32mI (118304) MQTT_UART: MQTT_EVENT_PUBLISHED, msg_id=59790[0m
+[0;32mI (118814) MQTT_UART: MQTT_EVENT_DATA[0m
+TOPIC=sensor/Air_Temperature
+DATA={"sensor":"Air Temperature Sensor","data": 38.6}
+[0;32mI (118824) MQTT_UART: MQTT_EVENT_PUBLISHED, msg_id=11217[0m
+[0;32mI (119324) MQTT_UART: MQTT_EVENT_DATA[0m
+TOPIC=sensor/Air_Temperature
+DATA={"sensor":"Air Temperature Sensor","data": 38.6}
+[0;32mI (119324) MQTT_UART: MQTT_EVENT_PUBLISHED, msg_id=59232[0m
+[0;32mI (119834) MQTT_UART: MQTT_EVENT_DATA[0m
+TOPIC=sensor/Air_Temperature
+DATA={"sensor":"Air Temperature Sensor","data": 38.6}
+[0;32mI (119844) MQTT_UART: MQTT_EVENT_PUBLISHED, msg_id=23659[0m
+[0;32mI (120064) MQTT_UART: Received data: {"sensor":"Soil Moisture Sensor","data": 16.1}[0m
+[0;32mI (120344) MQTT_UART: MQTT_EVENT_DATA[0m
+TOPIC=sensor/Air_Temperature
+DATA={"sensor":"Air Temperature Sensor","data": 38.6}
+[0;32mI (120354) MQTT_UART: MQTT_EVENT_PUBLISHED, msg_id=56046[0m
+[0;32mI (120804) MQTT_UART: MQTT_EVENT_DATA[0m
+TOPIC=sensor/Soil_Moisture
+DATA={"sensor":"Soil Moisture Sensor","data": 16.1}
+[0;32mI (120804) MQTT_UART: MQTT_EVENT_PUBLISHED, msg_id=21492[0m
+[0;32mI (121164) MQTT_UART: Received data: {"sensor":"Air Temperature Sensor","data": 30.0}[0m
+[0;32mI (121304) MQTT_UART: MQTT_EVENT_DATA[0m
+TOPIC=sensor/Soil_Moisture
+DATA={"sensor":"Soil Moisture Sensor","data": 16.1}
+[0;32mI (121314) MQTT_UART: MQTT_EVENT_PUBLISHED, msg_id=52229[0m
+[0;32mI (121804) MQTT_UART: MQTT_EVENT_DATA[0m
+TOPIC=sensor/Air_Temperature
+DATA={"sensor":"Air Temperature Sensor","data": 30.0}
+[0;32mI (121804) MQTT_UART: MQTT_EVENT_PUBLISHED, msg_id=44783[0m
+[0;32mI (122264) MQTT_UART: Received data: {"sensor":"Air Humidity Sensor","data": 83.0}[0m
+[0;32mI (122304) MQTT_UART: MQTT_EVENT_DATA[0m
+TOPIC=sensor/Air_Temperature
+DATA={"sensor":"Air Temperature Sensor","data": 30.0}
+[0;32mI (122304) MQTT_UART: MQTT_EVENT_PUBLISHED, msg_id=30411[0m
+[0;32mI (122804) MQTT_UART: MQTT_EVENT_DATA[0m
+TOPIC=sensor/Air_Humidity
+DATA={"sensor":"Air Humidity Sensor","data": 83.0}
+[0;32mI (122804) MQTT_UART: MQTT_EVENT_PUBLISHED, msg_id=17766[0m
+[0;32mI (123314) MQTT_UART: MQTT_EVENT_DATA[0m
+TOPIC=sensor/Air_Humidity
+DATA={"sensor":"Air Humidity Sensor","data": 83.0}
+[0;32mI (123324) MQTT_UART: MQTT_EVENT_PUBLISHED, msg_id=2956[0m
+[0;32mI (123364) MQTT_UART: Received data: {"sensor":"Water pH Sensor","data": 10.7}[0m
+[0;32mI (123824) MQTT_UART: MQTT_EVENT_DATA[0m
+TOPIC=sensor/Water_pH
+DATA={"sensor":"Water pH Sensor","data": 10.7}
+[0;32mI (123834) MQTT_UART: MQTT_EVENT_PUBLISHED, msg_id=40604[0m
+[0;32mI (124344) MQTT_UART: MQTT_EVENT_DATA[0m
+TOPIC=sensor/Water_pH
+DATA={"sensor":"Water pH Sensor","data": 10.7}
+[0;32mI (124344) MQTT_UART: MQTT_EVENT_PUBLISHED, msg_id=14656[0m
+[0;32mI (124464) MQTT_UART: Received data: {"sensor":"Air Temperature Sensor","data": 38.8}[0m
+[0;32mI (124854) MQTT_UART: MQTT_EVENT_DATA[0m
+TOPIC=sensor/Air_Temperature
+DATA={"sensor":"Air Temperature Sensor","data": 38.8}
+[0;32mI (124854) MQTT_UART: MQTT_EVENT_PUBLISHED, msg_id=33229[0m
+[0;32mI (125304) MQTT_UART: MQTT_EVENT_DATA[0m
+TOPIC=sensor/Air_Temperature
+DATA={"sensor":"Air Temperature Sensor","data": 38.8}
+[0;32mI (125304) MQTT_UART: MQTT_EVENT_PUBLISHED, msg_id=56670[0m
+[0;32mI (125824) MQTT_UART: MQTT_EVENT_DATA[0m
+TOPIC=sensor/Air_Temperature
+DATA={"sensor":"Air Temperature Sensor","data": 38.8}
+[0;32mI (125824) MQTT_UART: MQTT_EVENT_PUBLISHED, msg_id=19405[0m

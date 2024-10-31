@@ -1,0 +1,1006 @@
+��bootloader[0�ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7176
+load:0x40078000,len:15564
+ho 0 tail 12 room 4
+load:0x40080400,len:4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (31) boot: ESP-IDF v5.3.1-dirty 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Oct 24 2024 17:33:14[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (36) boot: chip revision: v3.1[0m
+[0;32mI (40) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (49) boot.esp32: SPI Flash Size : 4MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (59) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (70) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (77) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (85) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (92) boot: End of partition table[0m
+[0;32mI (96) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=2695ch (158044) map[0m
+[0;32mI (159) esp_image: segment 1: paddr=00036984 vaddr=3ffb0000 size=03f48h ( 16200) load[0m
+[0;32mI (165) esp_image: segment 2: paddr=0003a8d4 vaddr=40080000 size=05744h ( 22340) load[0m
+[0;32mI (174) esp_image: segment 3: paddr=00040020 vaddr=400d0020 size=9f408h (652296) map[0m
+[0;32mI (398) esp_image: segment 4: paddr=000df430 vaddr=40085744 size=12c84h ( 76932) load[0m
+[0;32mI (440) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (441) boot: Disabling RNG early entropy source...[0m
+[0;32mI (453) cpu_start: Multicore app[0m
+[0;32mI (461) cpu_start: Pro cpu start user code[0m
+[0;32mI (461) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (461) app_init: Application information:[0m
+[0;32mI (464) app_init: Project name:     mqtt_tcp[0m
+[0;32mI (469) app_init: App version:      017a3fe-dirty[0m
+[0;32mI (474) app_init: Compile time:     Oct 31 2024 19:17:00[0m
+[0;32mI (480) app_init: ELF file SHA256:  34287e2e4...[0m
+[0;32mI (486) app_init: ESP-IDF:          v5.3.1-dirty[0m
+[0;32mI (491) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (496) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (501) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (506) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (513) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (519) heap_init: At 3FFB8B70 len 00027490 (157 KiB): DRAM[0m
+[0;32mI (525) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (531) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (538) heap_init: At 400983C8 len 00007C38 (31 KiB): IRAM[0m
+[0;32mI (545) spi_flash: detected chip: generic[0m
+[0;32mI (548) spi_flash: flash io: dio[0m
+[0;32mI (553) main_task: Started on CPU0[0m
+[0;32mI (563) main_task: Calling app_main()[0m
+[0;32mI (563) MQTT_UART: [APP] Startup..[0m
+[0;32mI (563) MQTT_UART: [APP] Free memory: 276052 bytes[0m
+[0;32mI (563) MQTT_UART: [APP] IDF version: v5.3.1-dirty[0m
+[0;32mI (593) example_connect: Start example_connect.[0m
+I (603) wifi:wifi driver task: 3ffc0898, prio:23, stack:6656, core=0
+I (613) wifi:wifi firmware version: ccaebfa
+I (613) wifi:wifi certification version: v7.0
+I (613) wifi:config NVS flash: enabled
+I (613) wifi:config nano formating: disabled
+I (613) wifi:Init data frame dynamic rx buffer num: 32
+I (623) wifi:Init static rx mgmt buffer num: 5
+I (623) wifi:Init management short buffer num: 32
+I (633) wifi:Init dynamic tx buffer num: 32
+I (633) wifi:Init static rx buffer size: 1600
+I (643) wifi:Init static rx buffer num: 10
+I (643) wifi:Init dynamic rx buffer num: 32
+[0;32mI (643) wifi_init: rx ba win: 6[0m
+[0;32mI (653) wifi_init: accept mbox: 6[0m
+[0;32mI (653) wifi_init: tcpip mbox: 32[0m
+[0;32mI (653) wifi_init: udp mbox: 6[0m
+[0;32mI (663) wifi_init: tcp mbox: 6[0m
+[0;32mI (663) wifi_init: tcp tx win: 5760[0m
+[0;32mI (673) wifi_init: tcp rx win: 5760[0m
+[0;32mI (673) wifi_init: tcp mss: 1440[0m
+[0;32mI (673) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (683) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (693) phy_init: phy_version 4830,54550f7,Jun 20 2024,14:22:08[0m
+[0;33mW (773) phy_init: saving new calibration data because of checksum failure, mode(0)[0m
+I (793) wifi:mode : sta (48:e7:29:98:ac:a0)
+I (793) wifi:enable tsf
+[0;32mI (803) example_connect: Connecting to asdff...[0m
+W (803) wifi:Password length matches WPA2 standards, authmode threshold changes from OPEN to WPA2
+[0;32mI (803) example_connect: Waiting for IP(s)[0m
+I (3473) wifi:new:<3,0>, old:<1,0>, ap:<255,255>, sta:<3,0>, prof:1, snd_ch_cfg:0x0
+I (3473) wifi:state: init -> auth (0xb0)
+I (3473) wifi:state: auth -> assoc (0x0)
+I (3483) wifi:state: assoc -> run (0x10)
+I (3503) wifi:connected with asdff, aid = 133, channel 3, BW20, bssid = 84:46:fe:ee:e1:68
+I (3513) wifi:security: WPA2-PSK, phy: bgn, rssi: -60
+I (3513) wifi:pm start, type: 1
+
+I (3513) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us
+I (3533) wifi:AP's beacon interval = 102400 us, DTIM period = 1
+[0;32mI (4593) example_connect: Got IPv6 event: Interface "example_netif_sta" address: fe80:0000:0000:0000:4ae7:29ff:fe98:aca0, type: ESP_IP6_ADDR_IS_LINK_LOCAL[0m
+[0;32mI (6523) esp_netif_handlers: example_netif_sta ip: 192.168.100.37, mask: 255.255.255.0, gw: 192.168.100.1[0m
+[0;32mI (6523) example_connect: Got IPv4 event: Interface "example_netif_sta" address: 192.168.100.37[0m
+[0;32mI (6533) example_common: Connected to example_netif_sta[0m
+[0;32mI (6533) example_common: - IPv4 address: 192.168.100.37,[0m
+[0;32mI (6543) example_common: - IPv6 address: fe80:0000:0000:0000:4ae7:29ff:fe98:aca0, type: ESP_IP6_ADDR_IS_LINK_LOCAL[0m
+[0;32mI (6553) MQTT_UART: MQTT_EVENT_ERROR[0m
+[0;32mI (8153) MQTT_UART: MQTT_EVENT_CONNECTED[0m
+[0;32mI (8153) MQTT_UART: sent subscribe successful, msg_id=27579[0m
+[0;32mI (8413) MQTT_UART: MQTT_EVENT_SUBSCRIBED, msg_id=27579[0m
+[0;32mI (16563) MQTT_UART: Published data: [0m
+I (16863) wifi:<ba-add>idx:0 (ifx:0, 84:46:fe:ee:e1:68), tid:1, ssn:4, winSize:64
+[0;32mI (16863) MQTT_UART: MQTT_EVENT_DATA[0m
+TOPIC=huka/sensor
+DATA=
+[0;32mI (16873) MQTT_UART: MQTT_EVENT_PUBLISHED, msg_id=51380[0m
+[0;32mI (16923) MQTT_UART: Received data: [0m
+
+assert failed: tcp_slowtmr /IDF/components/lwip/lwip/src/core/tcp.c:1243 (tcp_slowtimr: persist ticking with in-flight data)
+
+
+Backtrace: 0x40081b4e:0x3ffbd240 0x4008a329:0x3ffbd260 0x4009219d:0x3ffbd280 0x401336c5:0x3ffbd3a0 0x40133abf:0x3ffbd3d0 0x401371ff:0x3ffbd3f0 0x401372bd:0x3ffbd410 0x4012f08e:0x3ffbd430 0x4012f14a:0x3ffbd450 0x4008aef1:0x3ffbd480
+
+
+
+
+ELF file SHA256: 34287e2e4
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7176
+load:0x40078000,len:15564
+ho 0 tail 12 room 4
+load:0x40080400,len:4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (31) boot: ESP-IDF v5.3.1-dirty 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Oct 24 2024 17:33:14[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (36) boot: chip revision: v3.1[0m
+[0;32mI (40) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (49) boot.esp32: SPI Flash Size : 4MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (59) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (70) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (77) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (85) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (92) boot: End of partition table[0m
+[0;32mI (96) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=2695ch (158044) map[0m
+[0;32mI (159) esp_image: segment 1: paddr=00036984 vaddr=3ffb0000 size=03f48h ( 16200) load[0m
+[0;32mI (165) esp_image: segment 2: paddr=0003a8d4 vaddr=40080000 size=05744h ( 22340) load[0m
+[0;32mI (174) esp_image: segment 3: paddr=00040020 vaddr=400d0020 size=9f408h (652296) map[0m
+[0;32mI (398) esp_image: segment 4: paddr=000df430 vaddr=40085744 size=12c84h ( 76932) load[0m
+[0;32mI (440) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (440) boot: Disabling RNG early entropy source...[0m
+[0;32mI (452) cpu_start: Multicore app[0m
+[0;32mI (461) cpu_start: Pro cpu start user code[0m
+[0;32mI (461) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (461) app_init: Application information:[0m
+[0;32mI (464) app_init: Project name:     mqtt_tcp[0m
+[0;32mI (469) app_init: App version:      017a3fe-dirty[0m
+[0;32mI (474) app_init: Compile time:     Oct 31 2024 19:17:00[0m
+[0;32mI (480) app_init: ELF file SHA256:  34287e2e4...[0m
+[0;32mI (485) app_init: ESP-IDF:          v5.3.1-dirty[0m
+[0;32mI (491) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (496) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (500) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (506) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (513) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (519) heap_init: At 3FFB8B70 len 00027490 (157 KiB): DRAM[0m
+[0;32mI (525) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (531) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (538) heap_init: At 400983C8 len 00007C38 (31 KiB): IRAM[0m
+[0;32mI (545) spi_flash: detected chip: generic[0m
+[0;32mI (548) spi_flash: flash io: dio[0m
+[0;32mI (553) main_task: Started on CPU0[0m
+[0;32mI (563) main_task: Calling app_main()[0m
+[0;32mI (563) MQTT_UART: [APP] Startup..[0m
+[0;32mI (563) MQTT_UART: [APP] Free memory: 276052 bytes[0m
+[0;32mI (563) MQTT_UART: [APP] IDF version: v5.3.1-dirty[0m
+[0;32mI (593) example_connect: Start example_connect.[0m
+I (603) wifi:wifi driver task: 3ffc0898, prio:23, stack:6656, core=0
+I (613) wifi:wifi firmware version: ccaebfa
+I (613) wifi:wifi certification version: v7.0
+I (613) wifi:config NVS flash: enabled
+I (613) wifi:config nano formating: disabled
+I (613) wifi:Init data frame dynamic rx buffer num: 32
+I (623) wifi:Init static rx mgmt buffer num: 5
+I (623) wifi:Init management short buffer num: 32
+I (633) wifi:Init dynamic tx buffer num: 32
+I (633) wifi:Init static rx buffer size: 1600
+I (643) wifi:Init static rx buffer num: 10
+I (643) wifi:Init dynamic rx buffer num: 32
+[0;32mI (643) wifi_init: rx ba win: 6[0m
+[0;32mI (653) wifi_init: accept mbox: 6[0m
+[0;32mI (653) wifi_init: tcpip mbox: 32[0m
+[0;32mI (653) wifi_init: udp mbox: 6[0m
+[0;32mI (663) wifi_init: tcp mbox: 6[0m
+[0;32mI (663) wifi_init: tcp tx win: 5760[0m
+[0;32mI (673) wifi_init: tcp rx win: 5760[0m
+[0;32mI (673) wifi_init: tcp mss: 1440[0m
+[0;32mI (673) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (683) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (693) phy_init: phy_version 4830,54550f7,Jun 20 2024,14:22:08[0m
+[0;33mW (773) phy_init: saving new calibration data because of checksum failure, mode(0)[0m
+I (863) wifi:mode : sta (48:e7:29:98:ac:a0)
+I (863) wifi:enable tsf
+[0;32mI (863) example_connect: Connecting to asdff...[0m
+W (863) wifi:Password length matches WPA2 standards, authmode threshold changes from OPEN to WPA2
+[0;32mI (873) example_connect: Waiting for IP(s)[0m
+I (3533) wifi:new:<3,0>, old:<1,0>, ap:<255,255>, sta:<3,0>, prof:1, snd_ch_cfg:0x0
+I (3533) wifi:state: init -> auth (0xb0)
+I (3543) wifi:state: auth -> assoc (0x0)
+I (3543) wifi:state: assoc -> run (0x10)
+I (3563) wifi:connected with asdff, aid = 133, channel 3, BW20, bssid = 84:46:fe:ee:e1:68
+I (3563) wifi:security: WPA2-PSK, phy: bgn, rssi: -57
+I (3573) wifi:pm start, type: 1
+
+I (3573) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us
+I (3583) wifi:AP's beacon interval = 102400 us, DTIM period = 1
+[0;32mI (4593) example_connect: Got IPv6 event: Interface "example_netif_sta" address: fe80:0000:0000:0000:4ae7:29ff:fe98:aca0, type: ESP_IP6_ADDR_IS_LINK_LOCAL[0m
+[0;32mI (6583) esp_netif_handlers: example_netif_sta ip: 192.168.100.37, mask: 255.255.255.0, gw: 192.168.100.1[0m
+[0;32mI (6583) example_connect: Got IPv4 event: Interface "example_netif_sta" address: 192.168.100.37[0m
+[0;32mI (6593) example_common: Connected to example_netif_sta[0m
+[0;32mI (6593) example_common: - IPv4 address: 192.168.100.37,[0m
+[0;32mI (6603) example_common: - IPv6 address: fe80:0000:0000:0000:4ae7:29ff:fe98:aca0, type: ESP_IP6_ADDR_IS_LINK_LOCAL[0m
+[0;32mI (6613) MQTT_UART: MQTT_EVENT_ERROR[0m
+[0;32mI (7183) MQTT_UART: MQTT_EVENT_CONNECTED[0m
+[0;32mI (7183) MQTT_UART: sent subscribe successful, msg_id=47217[0m
+[0;32mI (7623) MQTT_UART: MQTT_EVENT_SUBSCRIBED, msg_id=47217[0m
+[0;32mI (16623) MQTT_UART: Received data: f[0m
+[0;31mE (16623) transport_base: tcp_write error, errno=Socket is not connected[0m
+[0;31mE (16623) mqtt_client: Writing failed: errno=128[0m
+[0;32mI (16623) MQTT_UART: MQTT_EVENT_ERROR[0m
+[0;32mI (16633) MQTT_UART: MQTT_EVENT_DISCONNECTED[0m
+[0;31mE (16633) transport_base: poll_read select error 0, errno = Success, fd = -1[0m
+[0;32mI (16633) MQTT_UART: Published data: f[0m
+[0;31mE (16643) mqtt_client: Poll read error: 9, aborting connection[0m
+[0;32mI (16653) MQTT_UART: MQTT_EVENT_DISCONNECTED[0m
+
+assert failed: pbuf_free /IDF/components/lwip/lwip/src/core/pbuf.c:753 (pbuf_free: p->ref > 0)
+
+
+Backtrace: 0x40081b4e:0x3ffbd1f0 0x4008a329:0x3ffbd210 0x4009219d:0x3ffbd230 0x4013179a:0x3ffbd350 0x4013346e:0x3ffbd370 0x401334c2:0x3ffbd390 0x40133589:0x3ffbd3b0 0x40133aab:0x3ffbd3d0 0x401371ff:0x3ffbd3f0 0x401372bd:0x3ffbd410 0x4012f08e:0x3ffbd430 0x4012f14a:0x3ffbd450 0x4008aef1:0x3ffbd480
+
+
+
+
+ELF file SHA256: 34287e2e4
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7176
+load:0x40078000,len:15564
+ho 0 tail 12 room 4
+load:0x40080400,len:4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (31) boot: ESP-IDF v5.3.1-dirty 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Oct 24 2024 17:33:14[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (36) boot: chip revision: v3.1[0m
+[0;32mI (40) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (49) boot.esp32: SPI Flash Size : 4MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (59) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (70) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (77) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (85) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (92) boot: End of partition table[0m
+[0;32mI (96) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=2695ch (158044) map[0m
+[0;32mI (159) esp_image: segment 1: paddr=00036984 vaddr=3ffb0000 size=03f48h ( 16200) load[0m
+[0;32mI (165) esp_image: segment 2: paddr=0003a8d4 vaddr=40080000 size=05744h ( 22340) load[0m
+[0;32mI (174) esp_image: segment 3: paddr=00040020 vaddr=400d0020 size=9f408h (652296) map[0m
+[0;32mI (398) esp_image: segment 4: paddr=000df430 vaddr=40085744 size=12c84h ( 76932) load[0m
+[0;32mI (440) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (440) boot: Disabling RNG early entropy source...[0m
+[0;32mI (452) cpu_start: Multicore app[0m
+[0;32mI (461) cpu_start: Pro cpu start user code[0m
+[0;32mI (461) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (461) app_init: Application information:[0m
+[0;32mI (464) app_init: Project name:     mqtt_tcp[0m
+[0;32mI (469) app_init: App version:      017a3fe-dirty[0m
+[0;32mI (474) app_init: Compile time:     Oct 31 2024 19:17:00[0m
+[0;32mI (480) app_init: ELF file SHA256:  34287e2e4...[0m
+[0;32mI (485) app_init: ESP-IDF:          v5.3.1-dirty[0m
+[0;32mI (491) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (496) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (500) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (506) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (513) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (519) heap_init: At 3FFB8B70 len 00027490 (157 KiB): DRAM[0m
+[0;32mI (525) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (531) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (538) heap_init: At 400983C8 len 00007C38 (31 KiB): IRAM[0m
+[0;32mI (545) spi_flash: detected chip: generic[0m
+[0;32mI (548) spi_flash: flash io: dio[0m
+[0;32mI (553) main_task: Started on CPU0[0m
+[0;32mI (563) main_task: Calling app_main()[0m
+[0;32mI (563) MQTT_UART: [APP] Startup..[0m
+[0;32mI (563) MQTT_UART: [APP] Free memory: 276052 bytes[0m
+[0;32mI (563) MQTT_UART: [APP] IDF version: v5.3.1-dirty[0m
+[0;32mI (593) example_connect: Start example_connect.[0m
+I (603) wifi:wifi driver task: 3ffc0898, prio:23, stack:6656, core=0
+I (613) wifi:wifi firmware version: ccaebfa
+I (613) wifi:wifi certification version: v7.0
+I (613) wifi:config NVS flash: enabled
+I (613) wifi:config nano formating: disabled
+I (613) wifi:Init data frame dynamic rx buffer num: 32
+I (623) wifi:Init static rx mgmt buffer num: 5
+I (623) wifi:Init management short buffer num: 32
+I (633) wifi:Init dynamic tx buffer num: 32
+I (633) wifi:Init static rx buffer size: 1600
+I (643) wifi:Init static rx buffer num: 10
+I (643) wifi:Init dynamic rx buffer num: 32
+[0;32mI (643) wifi_init: rx ba win: 6[0m
+[0;32mI (653) wifi_init: accept mbox: 6[0m
+[0;32mI (653) wifi_init: tcpip mbox: 32[0m
+[0;32mI (653) wifi_init: udp mbox: 6[0m
+[0;32mI (663) wifi_init: tcp mbox: 6[0m
+[0;32mI (663) wifi_init: tcp tx win: 5760[0m
+[0;32mI (673) wifi_init: tcp rx win: 5760[0m
+[0;32mI (673) wifi_init: tcp mss: 1440[0m
+[0;32mI (673) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (683) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (693) phy_init: phy_version 4830,54550f7,Jun 20 2024,14:22:08[0m
+I (773) wifi:mode : sta (48:e7:29:98:ac:a0)
+I (773) wifi:enable tsf
+[0;32mI (773) example_connect: Connecting to asdff...[0m
+W (783) wifi:Password length matches WPA2 standards, authmode threshold changes from OPEN to WPA2
+[0;32mI (783) example_connect: Waiting for IP(s)[0m
+I (3453) wifi:new:<3,0>, old:<1,0>, ap:<255,255>, sta:<3,0>, prof:1, snd_ch_cfg:0x0
+I (3453) wifi:state: init -> auth (0xb0)
+I (3453) wifi:state: auth -> assoc (0x0)
+I (3473) wifi:state: assoc -> run (0x10)
+I (3493) wifi:connected with asdff, aid = 133, channel 3, BW20, bssid = 84:46:fe:ee:e1:68
+I (3493) wifi:security: WPA2-PSK, phy: bgn, rssi: -60
+I (3493) wifi:pm start, type: 1
+
+I (3493) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us
+I (3563) wifi:AP's beacon interval = 102400 us, DTIM period = 1
+[0;32mI (4593) example_connect: Got IPv6 event: Interface "example_netif_sta" address: fe80:0000:0000:0000:4ae7:29ff:fe98:aca0, type: ESP_IP6_ADDR_IS_LINK_LOCAL[0m
+[0;32mI (6503) esp_netif_handlers: example_netif_sta ip: 192.168.100.37, mask: 255.255.255.0, gw: 192.168.100.1[0m
+[0;32mI (6503) example_connect: Got IPv4 event: Interface "example_netif_sta" address: 192.168.100.37[0m
+[0;32mI (6513) example_common: Connected to example_netif_sta[0m
+[0;32mI (6513) example_common: - IPv4 address: 192.168.100.37,[0m
+[0;32mI (6523) example_common: - IPv6 address: fe80:0000:0000:0000:4ae7:29ff:fe98:aca0, type: ESP_IP6_ADDR_IS_LINK_LOCAL[0m
+[0;32mI (6533) MQTT_UART: MQTT_EVENT_ERROR[0m
+[0;32mI (7003) MQTT_UART: MQTT_EVENT_CONNECTED[0m
+[0;32mI (7013) MQTT_UART: sent subscribe successful, msg_id=9547[0m
+[0;32mI (7983) MQTT_UART: MQTT_EVENT_SUBSCRIBED, msg_id=9547[0m
+[0;32mI (16543) MQTT_UART: Received data: [0m
+Guru Meditation Error: Core  0 panic'ed (StoreProhibited). Exception was unhandled.
+
+Core  0 register dump:
+PC      : 0x4008fae8  PS      : 0x00060b33  A0      : 0x8008f484  A1      : 0x3ffcc460  
+A2      : 0x3ffcab64  A3      : 0x00000028  A4      : 0x0000d500  A5      : 0x00000000  
+A6      : 0x00000000  A7      : 0x3ffb8b84  A8      : 0x0000000d  A9      : 0x800d8f78  
+A10     : 0x00000002  A11     : 0x3ffb8b84  A12     : 0x00000804  A13     : 0x3ffb8ba8  
+A14     : 0x0000006f  A15     : 0x0000cdcd  SAR     : 0x0000001f  EXCCAUSE: 0x0000001d  
+EXCVADDR: 0x800d8f80  LBEG    : 0x4000c46c  LEND    : 0x4000c477  LCOUNT  : 0x00000000  
+
+
+Backtrace: 0x4008fae5:0x3ffcc460 0x4008f481:0x3ffcc480 0x400822f9:0x3ffcc4a0 0x40082405:0x3ffcc4c0 0x40082435:0x3ffcc4f0 0x400820f4:0x3ffcc510 0x40082129:0x3ffcc530 0x40092214:0x3ffcc550 0x40092238:0x3ffcc570 0x400dcbb5:0x3ffcc590 0x400db48f:0x3ffcc5c0 0x400db52d:0x3ffcc600 0x400dc360:0x3ffcc620 0x400d9b0a:0x3ffcc660 0x4008aef1:0x3ffcc680
+
+
+
+
+ELF file SHA256: 34287e2e4
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7176
+load:0x40078000,len:15564
+ho 0 tail 12 room 4
+load:0x40080400,len:4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (31) boot: ESP-IDF v5.3.1-dirty 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Oct 24 2024 17:33:14[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (36) boot: chip revision: v3.1[0m
+[0;32mI (40) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (49) boot.esp32: SPI Flash Size : 4MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (59) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (70) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (77) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (85) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (92) boot: End of partition table[0m
+[0;32mI (96) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=2695ch (158044) map[0m
+[0;32mI (159) esp_image: segment 1: paddr=00036984 vaddr=3ffb0000 size=03f48h ( 16200) load[0m
+[0;32mI (165) esp_image: segment 2: paddr=0003a8d4 vaddr=40080000 size=05744h ( 22340) load[0m
+[0;32mI (174) esp_image: segment 3: paddr=00040020 vaddr=400d0020 size=9f408h (652296) map[0m
+[0;32mI (398) esp_image: segment 4: paddr=000df430 vaddr=40085744 size=12c84h ( 76932) load[0m
+[0;32mI (440) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (440) boot: Disabling RNG early entropy source...[0m
+[0;32mI (452) cpu_start: Multicore app[0m
+[0;32mI (461) cpu_start: Pro cpu start user code[0m
+[0;32mI (461) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (461) app_init: Application information:[0m
+[0;32mI (464) app_init: Project name:     mqtt_tcp[0m
+[0;32mI (469) app_init: App version:      017a3fe-dirty[0m
+[0;32mI (474) app_init: Compile time:     Oct 31 2024 19:17:00[0m
+[0;32mI (480) app_init: ELF file SHA256:  34287e2e4...[0m
+[0;32mI (485) app_init: ESP-IDF:          v5.3.1-dirty[0m
+[0;32mI (491) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (496) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (500) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (506) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (513) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (519) heap_init: At 3FFB8B70 len 00027490 (157 KiB): DRAM[0m
+[0;32mI (525) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (531) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (538) heap_init: At 400983C8 len 00007C38 (31 KiB): IRAM[0m
+[0;32mI (545) spi_flash: detected chip: generic[0m
+[0;32mI (548) spi_flash: flash io: dio[0m
+[0;32mI (553) main_task: Started on CPU0[0m
+[0;32mI (563) main_task: Calling app_main()[0m
+[0;32mI (563) MQTT_UART: [APP] Startup..[0m
+[0;32mI (563) MQTT_UART: [APP] Free memory: 276052 bytes[0m
+[0;32mI (563) MQTT_UART: [APP] IDF version: v5.3.1-dirty[0m
+[0;32mI (593) example_connect: Start example_connect.[0m
+I (603) wifi:wifi driver task: 3ffc0898, prio:23, stack:6656, core=0
+I (613) wifi:wifi firmware version: ccaebfa
+I (613) wifi:wifi certification version: v7.0
+I (613) wifi:config NVS flash: enabled
+I (613) wifi:config nano formating: disabled
+I (613) wifi:Init data frame dynamic rx buffer num: 32
+I (623) wifi:Init static rx mgmt buffer num: 5
+I (623) wifi:Init management short buffer num: 32
+I (633) wifi:Init dynamic tx buffer num: 32
+I (633) wifi:Init static rx buffer size: 1600
+I (643) wifi:Init static rx buffer num: 10
+I (643) wifi:Init dynamic rx buffer num: 32
+[0;32mI (643) wifi_init: rx ba win: 6[0m
+[0;32mI (653) wifi_init: accept mbox: 6[0m
+[0;32mI (653) wifi_init: tcpip mbox: 32[0m
+[0;32mI (653) wifi_init: udp mbox: 6[0m
+[0;32mI (663) wifi_init: tcp mbox: 6[0m
+[0;32mI (663) wifi_init: tcp tx win: 5760[0m
+[0;32mI (673) wifi_init: tcp rx win: 5760[0m
+[0;32mI (673) wifi_init: tcp mss: 1440[0m
+[0;32mI (673) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (683) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (693) phy_init: phy_version 4830,54550f7,Jun 20 2024,14:22:08[0m
+[0;33mW (773) phy_init: saving new calibration data because of checksum failure, mode(0)[0m
+I (793) wifi:mode : sta (48:e7:29:98:ac:a0)
+I (793) wifi:enable tsf
+[0;32mI (803) example_connect: Connecting to asdff...[0m
+W (803) wifi:Password length matches WPA2 standards, authmode threshold changes from OPEN to WPA2
+[0;32mI (803) example_connect: Waiting for IP(s)[0m
+I (3473) wifi:new:<3,0>, old:<1,0>, ap:<255,255>, sta:<3,0>, prof:1, snd_ch_cfg:0x0
+I (3473) wifi:state: init -> auth (0xb0)
+I (3473) wifi:state: auth -> assoc (0x0)
+I (3483) wifi:state: assoc -> run (0x10)
+I (3503) wifi:connected with asdff, aid = 133, channel 3, BW20, bssid = 84:46:fe:ee:e1:68
+I (3503) wifi:security: WPA2-PSK, phy: bgn, rssi: -63
+I (3503) wifi:pm start, type: 1
+
+I (3503) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us
+I (3513) wifi:AP's beacon interval = 102400 us, DTIM period = 1
+[0;32mI (4593) example_connect: Got IPv6 event: Interface "example_netif_sta" address: fe80:0000:0000:0000:4ae7:29ff:fe98:aca0, type: ESP_IP6_ADDR_IS_LINK_LOCAL[0m
+[0;32mI (6513) esp_netif_handlers: example_netif_sta ip: 192.168.100.37, mask: 255.255.255.0, gw: 192.168.100.1[0m
+[0;32mI (6513) example_connect: Got IPv4 event: Interface "example_netif_sta" address: 192.168.100.37[0m
+[0;32mI (6523) example_common: Connected to example_netif_sta[0m
+[0;32mI (6523) example_common: - IPv4 address: 192.168.100.37,[0m
+[0;32mI (6533) example_common: - IPv6 address: fe80:0000:0000:0000:4ae7:29ff:fe98:aca0, type: ESP_IP6_ADDR_IS_LINK_LOCAL[0m
+[0;32mI (6543) MQTT_UART: MQTT_EVENT_ERROR[0m
+[0;32mI (7003) MQTT_UART: MQTT_EVENT_CONNECTED[0m
+[0;32mI (7013) MQTT_UART: sent subscribe successful, msg_id=49170[0m
+[0;32mI (7213) MQTT_UART: MQTT_EVENT_SUBSCRIBED, msg_id=49170[0m
+[0;32mI (16553) MQTT_UART: Received data: �
+Guru Meditation Error: Core  0 panic'ed (StoreProhibited). Exception was unhandled.
+
+Core  0 register dump:
+PC      : 0x4008fae8  PS      : 0x00060733  A0      : 0x8008f484  A1      : 0x3ffcc460  
+A2      : 0x3ffcab64  A3      : 0x00000028  A4      : 0x0000cc40  A5      : 0x00000000  
+A6      : 0x00000000  A7      : 0x3ffb8b84  A8      : 0x0000000d  A9      : 0x800d8f78  
+A10     : 0x00000002  A11     : 0x3ffb8b84  A12     : 0x00000804  A13     : 0x3ffb8ba8  
+A14     : 0x0000006f  A15     : 0x0000cdcd  SAR     : 0x0000001f  EXCCAUSE: 0x0000001d  
+EXCVADDR: 0x800d8f80  LBEG    : 0x4000c46c  LEND    : 0x4000c477  LCOUNT  : 0x00000000  
+
+
+Backtrace: 0x4008fae5:0x3ffcc460 0x4008f481:0x3ffcc480 0x400822f9:0x3ffcc4a0 0x40082405:0x3ffcc4c0 0x40082435:0x3ffcc4f0 0x400820f4:0x3ffcc510 0x40082129:0x3ffcc530 0x40092214:0x3ffcc550 0x40092238:0x3ffcc570 0x400dcbb5:0x3ffcc590 0x400db48f:0x3ffcc5c0 0x400db52d:0x3ffcc600 0x400dc360:0x3ffcc620 0x400d9b0a:0x3ffcc660 0x4008aef1:0x3ffcc680
+
+
+
+
+ELF file SHA256: 34287e2e4
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7176
+load:0x40078000,len:15564
+ho 0 tail 12 room 4
+load:0x40080400,len:4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (31) boot: ESP-IDF v5.3.1-dirty 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Oct 24 2024 17:33:14[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (36) boot: chip revision: v3.1[0m
+[0;32mI (40) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (49) boot.esp32: SPI Flash Size : 4MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (59) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (70) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (77) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (85) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (92) boot: End of partition table[0m
+[0;32mI (96) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=2695ch (158044) map[0m
+[0;32mI (159) esp_image: segment 1: paddr=00036984 vaddr=3ffb0000 size=03f48h ( 16200) load[0m
+[0;32mI (165) esp_image: segment 2: paddr=0003a8d4 vaddr=40080000 size=05744h ( 22340) load[0m
+[0;32mI (174) esp_image: segment 3: paddr=00040020 vaddr=400d0020 size=9f408h (652296) map[0m
+[0;32mI (398) esp_image: segment 4: paddr=000df430 vaddr=40085744 size=12c84h ( 76932) load[0m
+[0;32mI (440) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (440) boot: Disabling RNG early entropy source...[0m
+[0;32mI (452) cpu_start: Multicore app[0m
+[0;32mI (461) cpu_start: Pro cpu start user code[0m
+[0;32mI (461) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (461) app_init: Application information:[0m
+[0;32mI (464) app_init: Project name:     mqtt_tcp[0m
+[0;32mI (469) app_init: App version:      017a3fe-dirty[0m
+[0;32mI (474) app_init: Compile time:     Oct 31 2024 19:17:00[0m
+[0;32mI (480) app_init: ELF file SHA256:  34287e2e4...[0m
+[0;32mI (485) app_init: ESP-IDF:          v5.3.1-dirty[0m
+[0;32mI (491) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (496) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (500) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (506) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (513) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (519) heap_init: At 3FFB8B70 len 00027490 (157 KiB): DRAM[0m
+[0;32mI (525) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (531) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (538) heap_init: At 400983C8 len 00007C38 (31 KiB): IRAM[0m
+[0;32mI (545) spi_flash: detected chip: generic[0m
+[0;32mI (548) spi_flash: flash io: dio[0m
+[0;32mI (553) main_task: Started on CPU0[0m
+[0;32mI (563) main_task: Calling app_main()[0m
+[0;32mI (563) MQTT_UART: [APP] Startup..[0m
+[0;32mI (563) MQTT_UART: [APP] Free memory: 276052 bytes[0m
+[0;32mI (563) MQTT_UART: [APP] IDF version: v5.3.1-dirty[0m
+[0;32mI (593) example_connect: Start example_connect.[0m
+I (603) wifi:wifi driver task: 3ffc0898, prio:23, stack:6656, core=0
+I (613) wifi:wifi firmware version: ccaebfa
+I (613) wifi:wifi certification version: v7.0
+I (613) wifi:config NVS flash: enabled
+I (613) wifi:config nano formating: disabled
+I (613) wifi:Init data frame dynamic rx buffer num: 32
+I (623) wifi:Init static rx mgmt buffer num: 5
+I (623) wifi:Init management short buffer num: 32
+I (633) wifi:Init dynamic tx buffer num: 32
+I (633) wifi:Init static rx buffer size: 1600
+I (643) wifi:Init static rx buffer num: 10
+I (643) wifi:Init dynamic rx buffer num: 32
+[0;32mI (643) wifi_init: rx ba win: 6[0m
+[0;32mI (653) wifi_init: accept mbox: 6[0m
+[0;32mI (653) wifi_init: tcpip mbox: 32[0m
+[0;32mI (653) wifi_init: udp mbox: 6[0m
+[0;32mI (663) wifi_init: tcp mbox: 6[0m
+[0;32mI (663) wifi_init: tcp tx win: 5760[0m
+[0;32mI (673) wifi_init: tcp rx win: 5760[0m
+[0;32mI (673) wifi_init: tcp mss: 1440[0m
+[0;32mI (673) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (683) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (693) phy_init: phy_version 4830,54550f7,Jun 20 2024,14:22:08[0m
+[0;33mW (773) phy_init: saving new calibration data because of checksum failure, mode(0)[0m
+I (863) wifi:mode : sta (48:e7:29:98:ac:a0)
+I (863) wifi:enable tsf
+[0;32mI (863) example_connect: Connecting to asdff...[0m
+W (863) wifi:Password length matches WPA2 standards, authmode threshold changes from OPEN to WPA2
+[0;32mI (873) example_connect: Waiting for IP(s)[0m
+I (3533) wifi:new:<3,0>, old:<1,0>, ap:<255,255>, sta:<3,0>, prof:1, snd_ch_cfg:0x0
+I (3533) wifi:state: init -> auth (0xb0)
+I (3543) wifi:state: auth -> assoc (0x0)
+I (3553) wifi:state: assoc -> run (0x10)
+I (3573) wifi:connected with asdff, aid = 133, channel 3, BW20, bssid = 84:46:fe:ee:e1:68
+I (3573) wifi:security: WPA2-PSK, phy: bgn, rssi: -52
+I (3573) wifi:pm start, type: 1
+
+I (3573) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us
+I (3663) wifi:AP's beacon interval = 102400 us, DTIM period = 1
+[0;32mI (4593) example_connect: Got IPv6 event: Interface "example_netif_sta" address: fe80:0000:0000:0000:4ae7:29ff:fe98:aca0, type: ESP_IP6_ADDR_IS_LINK_LOCAL[0m
+[0;32mI (6583) esp_netif_handlers: example_netif_sta ip: 192.168.100.37, mask: 255.255.255.0, gw: 192.168.100.1[0m
+[0;32mI (6583) example_connect: Got IPv4 event: Interface "example_netif_sta" address: 192.168.100.37[0m
+[0;32mI (6593) example_common: Connected to example_netif_sta[0m
+[0;32mI (6593) example_common: - IPv4 address: 192.168.100.37,[0m
+[0;32mI (6603) example_common: - IPv6 address: fe80:0000:0000:0000:4ae7:29ff:fe98:aca0, type: ESP_IP6_ADDR_IS_LINK_LOCAL[0m
+[0;32mI (6613) MQTT_UART: MQTT_EVENT_ERROR[0m
+[0;32mI (8383) MQTT_UART: MQTT_EVENT_CONNECTED[0m
+[0;32mI (8393) MQTT_UART: sent subscribe successful, msg_id=63799[0m
+[0;32mI (8643) MQTT_UART: MQTT_EVENT_SUBSCRIBED, msg_id=63799[0m
+[0;32mI (16623) MQTT_UART: Published data: [0m
+[0;32mI (16673) MQTT_UART: Received data: {"sensor":"Soil Moisture Sensor","data": 33.1}{"sensor":"Air Temperature Sensor","data": 0.0}{"sensor":"Air Humidity Sensor","data"Guru Meditation Error: Core  0 panic'ed (StoreProhibited). Exception was unhandled.
+
+Core  0 register dump:
+PC      : 0x4008fae8  PS      : 0x00060f33  A0      : 0x8008f484  A1      : 0x3ffb9cb0  
+A2      : 0x3ffcab9c  A3      : 0x0000000c  A4      : 0x8008b296  A5      : 0x3ffcaa90  
+A6      : 0x00000003  A7      : 0x3ffb8b84  A8      : 0x00000000  A9      : 0x00000080  
+A10     : 0x00000001  A11     : 0x617fc000  A12     : 0x00000802  A13     : 0x3ffb8ba8  
+A14     : 0x3ffb00ac  A15     : 0x0000cdcd  SAR     : 0x0000001f  EXCCAUSE: 0x0000001d  
+EXCVADDR: 0x00000088  LBEG    : 0x4000c2e0  LEND    : 0x4000c2f6  LCOUNT  : 0xffffffff  
+
+
+Backtrace: 0x4008fae5:0x3ffb9cb0 0x4008f481:0x3ffb9cd0 0x400822f9:0x3ffb9cf0 0x40082405:0x3ffb9d10 0x40082435:0x3ffb9d40 0x400820f4:0x3ffb9d60 0x40082129:0x3ffb9d80 0x400921ad:0x3ffb9da0 0x4008512d:0x3ffb9dc0 0x4011d62b:0x3ffb9de0 0x40125f53:0x3ffb9e00 0x401235b5:0x3ffb9e20 0x4012be4e:0x3ffb9e40 0x4012be9d:0x3ffb9e70 0x4008aef1:0x3ffb9e90
+
+
+
+
+ELF file SHA256: 34287e2e4
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7176
+load:0x40078000,len:15564
+ho 0 tail 12 room 4
+load:0x40080400,len:4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (31) boot: ESP-IDF v5.3.1-dirty 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Oct 24 2024 17:33:14[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (36) boot: chip revision: v3.1[0m
+[0;32mI (40) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (49) boot.esp32: SPI Flash Size : 4MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (59) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (70) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (77) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (85) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (92) boot: End of partition table[0m
+[0;32mI (96) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=2695ch (158044) map[0m
+[0;32mI (159) esp_image: segment 1: paddr=00036984 vaddr=3ffb0000 size=03f48h ( 16200) load[0m
+[0;32mI (165) esp_image: segment 2: paddr=0003a8d4 vaddr=40080000 size=05744h ( 22340) load[0m
+[0;32mI (174) esp_image: segment 3: paddr=00040020 vaddr=400d0020 size=9f408h (652296) map[0m
+[0;32mI (398) esp_image: segment 4: paddr=000df430 vaddr=40085744 size=12c84h ( 76932) load[0m
+[0;32mI (440) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (440) boot: Disabling RNG early entropy source...[0m
+[0;32mI (452) cpu_start: Multicore app[0m
+[0;32mI (461) cpu_start: Pro cpu start user code[0m
+[0;32mI (461) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (461) app_init: Application information:[0m
+[0;32mI (464) app_init: Project name:     mqtt_tcp[0m
+[0;32mI (469) app_init: App version:      017a3fe-dirty[0m
+[0;32mI (474) app_init: Compile time:     Oct 31 2024 19:17:00[0m
+[0;32mI (480) app_init: ELF file SHA256:  34287e2e4...[0m
+[0;32mI (485) app_init: ESP-IDF:          v5.3.1-dirty[0m
+[0;32mI (491) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (496) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (500) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (506) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (513) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (519) heap_init: At 3FFB8B70 len 00027490 (157 KiB): DRAM[0m
+[0;32mI (525) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (531) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (538) heap_init: At 400983C8 len 00007C38 (31 KiB): IRAM[0m
+[0;32mI (545) spi_flash: detected chip: generic[0m
+[0;32mI (548) spi_flash: flash io: dio[0m
+[0;32mI (553) main_task: Started on CPU0[0m
+[0;32mI (563) main_task: Calling app_main()[0m
+[0;32mI (563) MQTT_UART: [APP] Startup..[0m
+[0;32mI (563) MQTT_UART: [APP] Free memory: 276052 bytes[0m
+[0;32mI (563) MQTT_UART: [APP] IDF version: v5.3.1-dirty[0m
+[0;32mI (593) example_connect: Start example_connect.[0m
+I (603) wifi:wifi driver task: 3ffc0898, prio:23, stack:6656, core=0
+I (613) wifi:wifi firmware version: ccaebfa
+I (613) wifi:wifi certification version: v7.0
+I (613) wifi:config NVS flash: enabled
+I (613) wifi:config nano formating: disabled
+I (613) wifi:Init data frame dynamic rx buffer num: 32
+I (623) wifi:Init static rx mgmt buffer num: 5
+I (623) wifi:Init management short buffer num: 32
+I (633) wifi:Init dynamic tx buffer num: 32
+I (633) wifi:Init static rx buffer size: 1600
+I (643) wifi:Init static rx buffer num: 10
+I (643) wifi:Init dynamic rx buffer num: 32
+[0;32mI (643) wifi_init: rx ba win: 6[0m
+[0;32mI (653) wifi_init: accept mbox: 6[0m
+[0;32mI (653) wifi_init: tcpip mbox: 32[0m
+[0;32mI (653) wifi_init: udp mbox: 6[0m
+[0;32mI (663) wifi_init: tcp mbox: 6[0m
+[0;32mI (663) wifi_init: tcp tx win: 5760[0m
+[0;32mI (673) wifi_init: tcp rx win: 5760[0m
+[0;32mI (673) wifi_init: tcp mss: 1440[0m
+[0;32mI (673) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (683) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (693) phy_init: phy_version 4830,54550f7,Jun 20 2024,14:22:08[0m
+[0;33mW (773) phy_init: saving new calibration data because of checksum failure, mode(0)[0m
+I (793) wifi:mode : sta (48:e7:29:98:ac:a0)
+I (793) wifi:enable tsf
+[0;32mI (803) example_connect: Connecting to asdff...[0m
+W (803) wifi:Password length matches WPA2 standards, authmode threshold changes from OPEN to WPA2
+[0;32mI (803) example_connect: Waiting for IP(s)[0m
+I (3473) wifi:new:<3,0>, old:<1,0>, ap:<255,255>, sta:<3,0>, prof:1, snd_ch_cfg:0x0
+I (3473) wifi:state: init -> auth (0xb0)
+I (3473) wifi:state: auth -> assoc (0x0)
+I (3483) wifi:state: assoc -> run (0x10)
+I (3503) wifi:connected with asdff, aid = 133, channel 3, BW20, bssid = 84:46:fe:ee:e1:68
+I (3503) wifi:security: WPA2-PSK, phy: bgn, rssi: -50
+I (3503) wifi:pm start, type: 1
+
+I (3513) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us
+I (3573) wifi:AP's beacon interval = 102400 us, DTIM period = 1
+[0;32mI (4593) example_connect: Got IPv6 event: Interface "example_netif_sta" address: fe80:0000:0000:0000:4ae7:29ff:fe98:aca0, type: ESP_IP6_ADDR_IS_LINK_LOCAL[0m
+[0;32mI (6523) esp_netif_handlers: example_netif_sta ip: 192.168.100.37, mask: 255.255.255.0, gw: 192.168.100.1[0m
+[0;32mI (6523) example_connect: Got IPv4 event: Interface "example_netif_sta" address: 192.168.100.37[0m
+[0;32mI (6533) example_common: Connected to example_netif_sta[0m
+[0;32mI (6533) example_common: - IPv4 address: 192.168.100.37,[0m
+[0;32mI (6543) example_common: - IPv6 address: fe80:0000:0000:0000:4ae7:29ff:fe98:aca0, type: ESP_IP6_ADDR_IS_LINK_LOCAL[0m
+[0;32mI (6553) MQTT_UART: MQTT_EVENT_ERROR[0m
+[0;32mI (8333) MQTT_UART: MQTT_EVENT_CONNECTED[0m
+[0;32mI (8333) MQTT_UART: sent subscribe successful, msg_id=58065[0m
+I (8593) wifi:<ba-add>idx:0 (ifx:0, 84:46:fe:ee:e1:68), tid:1, ssn:35, winSize:64
+[0;32mI (8603) MQTT_UART: MQTT_EVENT_SUBSCRIBED, msg_id=58065[0m
+[0;32mI (16563) MQTT_UART: Published data: [0m
+[0;32mI (16613) MQTT_UART: Received data: {"sensor":"Soil Moisture Sensor","data": 28.5}{"sensor":"Air Temperature Sensor","data": 0.0}{"sensor":"Air Humidity Sensor","data": 0.0}{"sensGuru Meditation Error: Core  0 panic'ed (StoreProhibited). Exception was unhandled.
+
+Core  0 register dump:
+PC      : 0x4008fae8  PS      : 0x00060d33  A0      : 0x8008f484  A1      : 0x3ffb9cb0  
+A2      : 0x3ffcac00  A3      : 0x0000000c  A4      : 0x8008b296  A5      : 0x3ffcaaa0  
+A6      : 0x00000003  A7      : 0x3ffb8b84  A8      : 0x00000003  A9      : 0xff000000  
+A10     : 0x00000001  A11     : 0x3ffcaf40  A12     : 0x00000802  A13     : 0x3ffb8ba8  
+A14     : 0x3ffb00ac  A15     : 0x0000cdcd  SAR     : 0x0000001f  EXCCAUSE: 0x0000001d  
+EXCVADDR: 0xff000008  LBEG    : 0x4000c2e0  LEND    : 0x4000c2f6  LCOUNT  : 0xffffffff  
+
+
+Backtrace: 0x4008fae5:0x3ffb9cb0 0x4008f481:0x3ffb9cd0 0x400822f9:0x3ffb9cf0 0x40082405:0x3ffb9d10 0x40082435:0x3ffb9d40 0x400820f4:0x3ffb9d60 0x40082129:0x3ffb9d80 0x400921ad:0x3ffb9da0 0x4008512d:0x3ffb9dc0 0x4011d62b:0x3ffb9de0 0x40125f53:0x3ffb9e00 0x401235b5:0x3ffb9e20 0x4012be4e:0x3ffb9e40 0x4012be9d:0x3ffb9e70 0x4008aef1:0x3ffb9e90
+
+
+
+
+ELF file SHA256: 34287e2e4
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7176
+load:0x40078000,len:15564
+ho 0 tail 12 room 4
+load:0x40080400,len:4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (31) boot: ESP-IDF v5.3.1-dirty 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Oct 24 2024 17:33:14[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (36) boot: chip revision: v3.1[0m
+[0;32mI (40) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (49) boot.esp32: SPI Flash Size : 4MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (59) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (70) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (77) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (85) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (92) boot: End of partition table[0m
+[0;32mI (96) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=2695ch (158044) map[0m
+[0;32mI (159) esp_image: segment 1: paddr=00036984 vaddr=3ffb0000 size=03f48h ( 16200) load[0m
+[0;32mI (165) esp_image: segment 2: paddr=0003a8d4 vaddr=40080000 size=05744h ( 22340) load[0m
+[0;32mI (174) esp_image: segment 3: paddr=00040020 vaddr=400d0020 size=9f408h (652296) map[0m
+[0;32mI (398) esp_image: segment 4: paddr=000df430 vaddr=40085744 size=12c84h ( 76932) load[0m
+[0;32mI (440) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (440) boot: Disabling RNG early entropy source...[0m
+[0;32mI (452) cpu_start: Multicore app[0m
+[0;32mI (461) cpu_start: Pro cpu start user code[0m
+[0;32mI (461) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (461) app_init: Application information:[0m
+[0;32mI (464) app_init: Project name:     mqtt_tcp[0m
+[0;32mI (469) app_init: App version:      017a3fe-dirty[0m
+[0;32mI (474) app_init: Compile time:     Oct 31 2024 19:17:00[0m
+[0;32mI (480) app_init: ELF file SHA256:  34287e2e4...[0m
+[0;32mI (485) app_init: ESP-IDF:          v5.3.1-dirty[0m
+[0;32mI (491) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (496) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (500) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (506) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (513) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (519) heap_init: At 3FFB8B70 len 00027490 (157 KiB): DRAM[0m
+[0;32mI (525) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (531) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (538) heap_init: At 400983C8 len 00007C38 (31 KiB): IRAM[0m
+[0;32mI (545) spi_flash: detected chip: generic[0m
+[0;32mI (548) spi_flash: flash io: dio[0m
+[0;32mI (553) main_task: Started on CPU0[0m
+[0;32mI (563) main_task: Calling app_main()[0m
+[0;32mI (563) MQTT_UART: [APP] Startup..[0m
+[0;32mI (563) MQTT_UART: [APP] Free memory: 276052 bytes[0m
+[0;32mI (563) MQTT_UART: [APP] IDF version: v5.3.1-dirty[0m
+[0;32mI (593) example_connect: Start example_connect.[0m
+I (603) wifi:wifi driver task: 3ffc0898, prio:23, stack:6656, core=0
+I (613) wifi:wifi firmware version: ccaebfa
+I (613) wifi:wifi certification version: v7.0
+I (613) wifi:config NVS flash: enabled
+I (613) wifi:config nano formating: disabled
+I (613) wifi:Init data frame dynamic rx buffer num: 32
+I (623) wifi:Init static rx mgmt buffer num: 5
+I (623) wifi:Init management short buffer num: 32
+I (633) wifi:Init dynamic tx buffer num: 32
+I (633) wifi:Init static rx buffer size: 1600
+I (643) wifi:Init static rx buffer num: 10
+I (643) wifi:Init dynamic rx buffer num: 32
+[0;32mI (643) wifi_init: rx ba win: 6[0m
+[0;32mI (653) wifi_init: accept mbox: 6[0m
+[0;32mI (653) wifi_init: tcpip mbox: 32[0m
+[0;32mI (653) wifi_init: udp mbox: 6[0m
+[0;32mI (663) wifi_init: tcp mbox: 6[0m
+[0;32mI (663) wifi_init: tcp tx win: 5760[0m
+[0;32mI (673) wifi_init: tcp rx win: 5760[0m
+[0;32mI (673) wifi_init: tcp mss: 1440[0m
+[0;32mI (673) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (683) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (693) phy_init: phy_version 4830,54550f7,Jun 20 2024,14:22:08[0m
+I (783) wifi:mode : sta (48:e7:29:98:ac:a0)
+I (783) wifi:enable tsf
+[0;32mI (783) example_connect: Connecting to asdff...[0m
+W (783) wifi:Password length matches WPA2 standards, authmode threshold changes from OPEN to WPA2
+[0;32mI (793) example_connect: Waiting for IP(s)[0m
+I (3453) wifi:new:<3,0>, old:<1,0>, ap:<255,255>, sta:<3,0>, prof:1, snd_ch_cfg:0x0
+I (3463) wifi:state: init -> auth (0xb0)
+I (3463) wifi:state: auth -> assoc (0x0)
+I (3463) wifi:state: assoc -> run (0x10)
+I (3513) wifi:connected with asdff, aid = 133, channel 3, BW20, bssid = 84:46:fe:ee:e1:68
+I (3513) wifi:security: WPA2-PSK, phy: bgn, rssi: -53
+I (3523) wifi:pm start, type: 1
+
+I (3523) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us
+I (3543) wifi:AP's beacon interval = 102400 us, DTIM period = 1
+[0;32mI (4593) example_connect: Got IPv6 event: Interface "example_netif_sta" address: fe80:0000:0000:0000:4ae7:29ff:fe98:aca0, type: ESP_IP6_ADDR_IS_LINK_LOCAL[0m
+[0;32mI (6533) esp_netif_handlers: example_netif_sta ip: 192.168.100.37, mask: 255.255.255.0, gw: 192.168.100.1[0m
+[0;32mI (6533) example_connect: Got IPv4 event: Interface "example_netif_sta" address: 192.168.100.37[0m
+[0;32mI (6543) example_common: Connected to example_netif_sta[0m
+[0;32mI (6543) example_common: - IPv4 address: 192.168.100.37,[0m
+[0;32mI (6553) example_common: - IPv6 address: fe80:0000:0000:0000:4ae7:29ff:fe98:aca0, type: ESP_IP6_ADDR_IS_LINK_LOCAL[0m
+[0;32mI (6563) MQTT_UART: MQTT_EVENT_ERROR[0m
+[0;32mI (7083) MQTT_UART: MQTT_EVENT_CONNECTED[0m
+[0;32mI (7093) MQTT_UART: sent subscribe successful, msg_id=23317[0m
+I (7333) wifi:<ba-add>idx:0 (ifx:0, 84:46:fe:ee:e1:68), tid:1, ssn:45, winSize:64
+[0;32mI (7343) MQTT_UART: MQTT_EVENT_SUBSCRIBED, msg_id=23317[0m
+I (8303) wifi:<ba-add>idx:1 (ifx:0, 84:46:fe:ee:e1:68), tid:0, ssn:19, winSize:64
+[0;32mI (16573) MQTT_UART: Published data: [0m
+[0;32mI (16623) MQTT_UART: Received data: {"sensor":"Soil Moisture Sensor","data": 39.3}{"sensor":"Air Temperature Sensor","data": 31.0}{"sensor":"Air Humidity Sensor","data": 83.0}{"sensor":"Water pH Sensor","data": 8.2}{"sensor":"Air Temperature Sensor","data": 32.4}{"sensor":"Soil Moisture Sensor","data": 39.8}{"sensor":"Air Temperature Sensor","data": 31.0}{"sensor":"Air Humidity Sensor","data": 84.0}{"sensor":"Water pH Sensor","data": 8.1}{"sensor":"Air Temperature Sensor","data": 32.2}[0m
+Guru Meditation Error: Core  1 panic'ed (LoadProhibited). Exception was unhandled.
+
+Core  1 register dump:
+PC      : 0x401355c4  PS      : 0x00060130  A0      : 0x8013ad1d  A1      : 0x3ffbd3c0  
+A2      : 0x3ffcc874  A3      : 0x3ffc6670  A4      : 0x00000000  A5      : 0x00000006  
+A6      : 0x3ffb5b70  A7      : 0xf1fb8f01  A8      : 0x00000002  A9      : 0x00000001  
+A10     : 0x2c22726f  A11     : 0x3ffcac58  A12     : 0x00000018  A13     : 0x00000001  
+A14     : 0x0000005b  A15     : 0x00000000  SAR     : 0x00000020  EXCCAUSE: 0x0000001c  
+EXCVADDR: 0xf1fb8f3d  LBEG    : 0x4000c2e0  LEND    : 0x4000c2f6  LCOUNT  : 0xffffffff  
+
+
+Backtrace: 0x401355c1:0x3ffbd3c0 0x4013ad1a:0x3ffbd3f0 0x4013f992:0x3ffbd410 0x4012f0e1:0x3ffbd430 0x4012f164:0x3ffbd450 0x4008aef1:0x3ffbd480
+
+
+
+
+ELF file SHA256: 34287e2e4
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7176
+load:0x40078000,len:15564
+ho 0 tail 12 room 4
+load:0x40080400,len:4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (31) boot: ESP-IDF v5.3.1-dirty 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Oct 24 2024 17:33:14[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (36) boot: chip revision: v3.1[0m
+[0;32mI (40) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (49) boot.esp32: SPI Flash Size : 4MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (59) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (70) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (77) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (85) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (92) boot: End of partition table[0m
+[0;32mI (96) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=2695ch (158044) map[0m
+[0;32mI (159) esp_image: segment 1: paddr=00036984 vaddr=3ffb0000 size=03f48h ( 16200) load[0m
+[0;32mI (165) esp_image: segment 2: paddr=0003a8d4 vaddr=40080000 size=05744h ( 22340) load[0m
+[0;32mI (174) esp_image: segment 3: paddr=00040020 vaddr=400d0020 size=9f408h (652296) map[0m
+[0;32mI (398) esp_image: segment 4: paddr=000df430 vaddr=40085744 size=12c84h ( 76932) load[0m
+[0;32mI (440) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (440) boot: Disabling RNG early entropy source...[0m
+[0;32mI (452) cpu_start: Multicore app[0m
+[0;32mI (461) cpu_start: Pro cpu start user code[0m
+[0;32mI (461) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (461) app_init: Application information:[0m
+[0;32mI (464) app_init: Project name:     mqtt_tcp[0m
+[0;32mI (469) app_init: App version:      017a3fe-dirty[0m
+[0;32mI (474) app_init: Compile time:     Oct 31 2024 19:17:00[0m
+[0;32mI (480) app_init: ELF file SHA256:  34287e2e4...[0m
+[0;32mI (485) app_init: ESP-IDF:          v5.3.1-dirty[0m
+[0;32mI (491) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (495) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (500) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (505) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (513) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (518) heap_init: At 3FFB8B70 len 00027490 (157 KiB): DRAM[0m
+[0;32mI (525) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (531) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (537) heap_init: At 400983C8 len 00007C38 (31 KiB): IRAM[0m
+[0;32mI (545) spi_flash: detected chip: generic[0m
+[0;32mI (548) spi_flash: flash io: dio[0m
+[0;32mI (553) main_task: Started on CPU0[0m
+[0;32mI (563) main_task: Calling app_main()[0m
+[0;32mI (563) MQTT_UART: [APP] Startup..[0m
+[0;32mI (563) MQTT_UART: [APP] Free memory: 276052 bytes[0m
+[0;32mI (563) MQTT_UART: [APP] IDF version: v5.3.1-dirty[0m
+[0;32mI (593) example_connect: Start example_connect.[0m
+I (603) wifi:wifi driver task: 3ffc0898, prio:23, stack:6656, core=0
+I (613) wifi:wifi firmware version: ccaebfa
+I (613) wifi:wifi certification version: v7.0
+I (613) wifi:config NVS flash: enabled
+I (613) wifi:config nano formating: disabled
+I (613) wifi:Init data frame dynamic rx buffer num: 32
+I (623) wifi:Init static rx mgmt buffer num: 5
+I (623) wifi:Init management short buffer num: 32
+I (633) wifi:Init dynamic tx buffer num: 32
+I (633) wifi:Init static rx buffer size: 1600
+I (643) wifi:Init static rx buffer num: 10
+I (643) wifi:Init dynamic rx buffer num: 32
+[0;32mI (643) wifi_init: rx ba win: 6[0m
+[0;32mI (653) wifi_init: accept mbox: 6[0m
+[0;32mI (653) wifi_init: tcpip mbox: 32[0m
+[0;32mI (653) wifi_init: udp mbox: 6[0m
+[0;32mI (663) wifi_init: tcp mbox: 6[0m
+[0;32mI (663) wifi_init: tcp tx win: 5760[0m
+[0;32mI (673) wifi_init: tcp rx win: 5760[0m
+[0;32mI (673) wifi_init: tcp mss: 1440[0m
+[0;32mI (673) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (683) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (693) phy_init: phy_version 4830,54550f7,Jun 20 2024,14:22:08[0m
+I (773) wifi:mode : sta (48:e7:29:98:ac:a0)
+I (773) wifi:enable tsf
+[0;32mI (773) example_connect: Connecting to asdff...[0m
+W (773) wifi:Password length matches WPA2 standards, authmode threshold changes from OPEN to WPA2
+[0;32mI (783) example_connect: Waiting for IP(s)[0m
+I (3453) wifi:new:<3,0>, old:<1,0>, ap:<255,255>, sta:<3,0>, prof:1, snd_ch_cfg:0x0
+I (3453) wifi:state: init -> auth (0xb0)
+I (3453) wifi:state: auth -> assoc (0x0)
+I (3463) wifi:state: assoc -> run (0x10)
+I (3483) wifi:connected with asdff, aid = 133, channel 3, BW20, bssid = 84:46:fe:ee:e1:68
+I (3483) wifi:security: WPA2-PSK, phy: bgn, rssi: -56
+I (3483) wifi:pm start, type: 1
+
+I (3483) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us
+I (3503) wifi:AP's beacon interval = 102400 us, DTIM period = 1
+[0;32mI (4593) example_connect: Got IPv6 event: Interface "example_netif_sta" address: fe80:0000:0000:0000:4ae7:29ff:fe98:aca0, type: ESP_IP6_ADDR_IS_LINK_LOCAL[0m
+[0;32mI (6493) esp_netif_handlers: example_netif_sta ip: 192.168.100.37, mask: 255.255.255.0, gw: 192.168.100.1[0m
+[0;32mI (6493) example_connect: Got IPv4 event: Interface "example_netif_sta" address: 192.168.100.37[0m
+[0;32mI (6503) example_common: Connected to example_netif_sta[0m
+[0;32mI (6503) example_common: - IPv4 address: 192.168.100.37,[0m
+[0;32mI (6513) example_common: - IPv6 address: fe80:0000:0000:0000:4ae7:29ff:fe98:aca0, type: ESP_IP6_ADDR_IS_LINK_LOCAL[0m
+[0;32mI (6523) MQTT_UART: MQTT_EVENT_ERROR[0m
+[0;32mI (7093) MQTT_UART: MQTT_EVENT_CONNECTED[0m
+[0;32mI (7093) MQTT_UART: sent subscribe successful, msg_id=9989[0m
+I (7343) wifi:<ba-add>idx:0 (ifx:0, 84:46:fe:ee:e1:68), tid:1, ssn:55, winSize:64
+[0;32mI (7353) MQTT_UART: MQTT_EVENT_SUBSCRIBED, msg_id=9989[0m

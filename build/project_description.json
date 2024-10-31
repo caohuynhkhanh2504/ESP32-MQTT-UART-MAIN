@@ -1,7 +1,7 @@
 {
     "version":            "1.1",
     "project_name":       "mqtt_tcp",
-    "project_version":    "1",
+    "project_version":    "017a3fe-dirty",
     "project_path":       "D:/NCKH2024/Summary/Huka/ESP32_MQTT_I2C",
     "idf_path":           "D:/Espressif/frameworks/esp-idf-v5.3.1",
     "build_dir":          "D:/NCKH2024/Summary/Huka/ESP32_MQTT_I2C/build",

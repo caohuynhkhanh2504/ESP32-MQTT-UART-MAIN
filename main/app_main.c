@@ -13,7 +13,7 @@
 #include "freertos/task.h"
 #include "freertos/semphr.h"
 #include "freertos/queue.h"
-
+#include "driver/uart.h"
 #include "lwip/sockets.h"
 #include "lwip/dns.h"
 #include "lwip/netdb.h"
@@ -21,19 +21,23 @@
 #include "esp_log.h"
 #include "mqtt_client.h"
 
-#define I2C_SLAVE_SCL_IO 22   /*!< GPIO number for I2C slave clock */
-#define I2C_SLAVE_SDA_IO 21   /*!< GPIO number for I2C slave data */
-#define I2C_SLAVE_NUM I2C_NUM_0 /*!< I2C port number for slave dev */
-#define I2C_SLAVE_TX_BUF_LEN (4 * 128) /*!< I2C slave tx buffer size */
-#define I2C_SLAVE_RX_BUF_LEN (4 * 128) /*!< I2C slave rx buffer size */
-#define I2C_SLAVE_ADDRESS 0x0A /*!< ESP32 I2C slave address */
+#define UART_NUM UART_NUM_2 //  UART2
+#define TXD_PIN (GPIO_NUM_17) // Chân TX của UART1
+#define RXD_PIN (GPIO_NUM_16) // Chân RX của UART1
+#define BUF_SIZE (1024)
 
 #define MQTT_BROKER_URI "mqtt://test.mosquitto.org:1883"
-#define MQTT_TOPIC "huka/sensor"
+#define MQTT_TOPIC_SOIL_MOISTURE "sensor/Soil_Moisture"
+#define MQTT_TOPIC_AIR_TEMPERATURE "sensor/Air_Temperature"
+#define MQTT_TOPIC_AIR_HUMIDITY "sensor/Air_Humidity"
+#define MQTT_TOPIC_WATER_PH "sensor/Water_pH"
+#define MQTT_TOPIC_WATER_TEMPERATURE "sensor/Water_Temperature"
 
-static const char *TAG = "MQTT_I2C";
+
+static const char *TAG = "MQTT_UART";
 esp_mqtt_client_handle_t client;
-uint8_t data[200];
+uint8_t mqtt_data[BUF_SIZE];
+
 int length;
 
 
@@ -47,8 +51,13 @@ static void mqtt_event_handler(void *handler_args, esp_event_base_t base, int32_
     case MQTT_EVENT_CONNECTED:
         ESP_LOGI(TAG, "MQTT_EVENT_CONNECTED");
 
-        msg_id = esp_mqtt_client_subscribe(client, MQTT_TOPIC, 0);
-        ESP_LOGI(TAG, "sent subscribe successful, msg_id=%d", msg_id);
+        esp_mqtt_client_subscribe(client, MQTT_TOPIC_SOIL_MOISTURE, 0);
+        esp_mqtt_client_subscribe(client, MQTT_TOPIC_AIR_TEMPERATURE, 0);
+        esp_mqtt_client_subscribe(client, MQTT_TOPIC_AIR_HUMIDITY, 0);
+        esp_mqtt_client_subscribe(client, MQTT_TOPIC_WATER_PH, 0);
+        esp_mqtt_client_subscribe(client, MQTT_TOPIC_WATER_TEMPERATURE, 0);
+
+        ESP_LOGI(TAG, "sent subscribe successful");
         break;
     case MQTT_EVENT_DISCONNECTED:
         ESP_LOGI(TAG, "MQTT_EVENT_DISCONNECTED");
@@ -67,11 +76,8 @@ static void mqtt_event_handler(void *handler_args, esp_event_base_t base, int32_
         printf("TOPIC=%.*s\r\n", event->topic_len, event->topic);
         printf("DATA=%.*s\r\n", event->data_len, event->data);
         break;
-    case MQTT_EVENT_ERROR:
-        ESP_LOGI(TAG, "MQTT_EVENT_ERROR");
-        break;
     default:
-        ESP_LOGI(TAG, "Other event id:%d", event->event_id);
+        ESP_LOGI(TAG, "MQTT_EVENT_ERROR");
         break;
     }
 }
@@ -112,6 +118,60 @@ static void mqtt_app_start(void)
     esp_mqtt_client_start(client);
 }
 
+void uart_init() {
+    const uart_config_t uart_config = {
+        .baud_rate = 115200,
+        .data_bits = UART_DATA_8_BITS,
+        .parity = UART_PARITY_DISABLE,
+        .stop_bits = UART_STOP_BITS_1,
+        .flow_ctrl = UART_HW_FLOWCTRL_DISABLE
+    };
+
+    // Cấu hình UART1
+    uart_param_config(UART_NUM, &uart_config);
+    uart_set_pin(UART_NUM, TXD_PIN, RXD_PIN, UART_PIN_NO_CHANGE, UART_PIN_NO_CHANGE);
+    uart_driver_install(UART_NUM, BUF_SIZE * 2, 0, 0, NULL, 0);
+}
+
+void uart_read_task(void *arg) {
+    uint8_t uart_data[BUF_SIZE];
+    while (1) {
+        // Đọc dữ liệu từ UART
+        int length = uart_read_bytes(UART_NUM, uart_data, BUF_SIZE, 50 / portTICK_PERIOD_MS);
+        if (length > 0) {
+            uart_data[length] = '\0'; // end
+            ESP_LOGI(TAG, "Received data: %s", uart_data);
+            strcpy((char *)mqtt_data, (char *)uart_data);
+            memset(uart_data, 0, sizeof(uart_data));
+        }
+        vTaskDelay(200/portTICK_PERIOD_MS); // delay
+    }
+}
+
+
+void mqtt_publish_task(void *pvParameters) {
+    while (1) {
+        if (strstr((char *)mqtt_data, "\"sensor\":\"Soil Moisture Sensor\"") != NULL) {
+            esp_mqtt_client_publish(client, MQTT_TOPIC_SOIL_MOISTURE, (char *)mqtt_data, strlen((char *)mqtt_data), 1, 0);
+        }
+        if (strstr((char *)mqtt_data, "\"sensor\":\"Air Temperature Sensor\"") != NULL) {
+            esp_mqtt_client_publish(client, MQTT_TOPIC_AIR_TEMPERATURE, (char *)mqtt_data, strlen((char *)mqtt_data), 1, 0);
+        }
+        if (strstr((char *)mqtt_data, "\"sensor\":\"Air Humidity Sensor\"") != NULL) {
+            esp_mqtt_client_publish(client, MQTT_TOPIC_AIR_HUMIDITY, (char *)mqtt_data, strlen((char *)mqtt_data), 1, 0);
+        }
+        if (strstr((char *)mqtt_data, "\"sensor\":\"Water pH Sensor\"") != NULL) {
+            esp_mqtt_client_publish(client, MQTT_TOPIC_WATER_PH, (char *)mqtt_data, strlen((char *)mqtt_data), 1, 0);
+        }
+        if (strstr((char *)mqtt_data, "\"sensor\":\"Water Temperature Sensor\"") != NULL) {
+            esp_mqtt_client_publish(client, MQTT_TOPIC_WATER_TEMPERATURE, (char *)mqtt_data, strlen((char *)mqtt_data), 1, 0);
+        }
+
+        vTaskDelay(100/portTICK_PERIOD_MS);
+    }
+}
+
+
 void app_main(void)
 {
     ESP_LOGI(TAG, "[APP] Startup..");
@@ -136,35 +196,15 @@ void app_main(void)
      */
     ESP_ERROR_CHECK(example_connect());
 
+    uart_init();
+
     mqtt_app_start();
-
-    i2c_config_t conf_slave = {
-        .sda_io_num = I2C_SLAVE_SDA_IO,
-        .sda_pullup_en = GPIO_PULLUP_ENABLE,
-        .scl_io_num = I2C_SLAVE_SCL_IO,
-        .scl_pullup_en = GPIO_PULLUP_ENABLE,
-        .mode = I2C_MODE_SLAVE,
-        .slave.addr_10bit_en = 0,
-        .slave.slave_addr = I2C_SLAVE_ADDRESS,
-        .clk_flags = 0,
-    };
-
-    // Cau hinh i2c
-    ESP_ERROR_CHECK(i2c_param_config(I2C_SLAVE_NUM, &conf_slave));
-    ESP_ERROR_CHECK(i2c_driver_install(I2C_SLAVE_NUM, I2C_MODE_SLAVE,
-                                       I2C_SLAVE_RX_BUF_LEN,
-                                       I2C_SLAVE_TX_BUF_LEN, 0));
-
+    vTaskDelay(1000);
+    xTaskCreate(uart_read_task, "uart_read_task", 4096, NULL, 10, NULL);
+    xTaskCreate(mqtt_publish_task, "mqtt_publish_task", 4096, NULL, 5, NULL);
+    
     while(1)
     {
-        length = i2c_slave_read_buffer(I2C_SLAVE_NUM, data, I2C_SLAVE_RX_BUF_LEN, 1000 / portTICK_PERIOD_MS);
-        ESP_LOGI(TAG, "Waiting for data from I2C.......");
-            if(length > 0)
-        {
-            ESP_LOGI(TAG, "Received data: %.*s",length, data);
-            esp_mqtt_client_publish(client, MQTT_TOPIC, (char *)data, 0, 1, 0);
-            memset(data, 0, I2C_SLAVE_RX_BUF_LEN);
-        }
-    vTaskDelay(pdMS_TO_TICKS(1000));
+        vTaskDelay(pdMS_TO_TICKS(1000));
     }
 }
